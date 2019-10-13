@@ -1,5 +1,5 @@
-# Learning_plan
-##一、学习Spring-boot框架  
+# Learning_plan  
+##一、学习Spring-boot框架   
 1.配置好环境（Java开发环境，Spring-boot开发环境，MySQL环境）  
 2.项目配置：创建一个练手项目，学会添加模块，配置项目。  
 3.掌握三层代码结构编写DAO（Repository）、Servers、Controller，掌握组件的代码配置。  

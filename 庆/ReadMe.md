@@ -32,5 +32,20 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     - [x] 在 IDEA 设置 Github 账户（重点：File-Settings-Github, VCS）
     - [x] 使用 Github 组织成员的工作流程（以前只用过个人的工作流程）
 - 2019.10.13 第一阶段-第 2 日
-    - [ ] 安装 MySql
+    - [x] 安装 MySql （没有仔细看 ssm-demo 的开发环境介绍，装的是 8.0 的，倒是用 IDEA 的 DB 连接工具执行了脚本，但 demo 就是跑不起来。）
+    
+        > 简要分析原因：MuSQL 5.x 和 8.0 有着飞跃的发展，jdbc 的驱动改变了，还有一些配置上的改变。pom.xml 改了依赖，数据库改了时区，建了新用户（root默认不能远程连接），还翻遍了互联网没找到解决的方法，也没能运行起来）
     - [ ] 运行起 ssm-demo
+    
+### 注意
+##### MySQL 的安装
+1. 到[官网](https://dev.mysql.com/downloads/)下载社区版
+    > 虽然 MySQL 是开源的，但也提供企业版。下载时默认版本是 8.0 ，下载界面右侧可选其他版本
+2. 安装时只需选择安装 'Server only' 即可，因为我们可以通过 IDEA 来管理，不需要像以前装 sqldevelper(Oracle), SSMS(SQL Server) 这些 GUI 的管理工具
+    ![安装选择](./img/installSel.png)
+3. 安装时请创建一个用户，默认 root 用户是不能远程连接的，但是可以修改，关键词是 “开启远程访问”、“host” 等
+4. 如果在 IDEA 中测试连接数据库提示 serverTimeZone 类似错误，可以按照错误提示设置时区为 `GMT-8` (东八区)
+    > 这只是途径之一，还可以 [这样](https://blog.csdn.net/cy12306/article/details/97259049) 修改, 但其实一步也能解决问题。
+    原因大概在数据库默认安装的时候使用的是时区是 SYSTEM (从链接中可以看出)，而这个值是美国时区，出现了不匹配或 IDEA 不清楚 SYSTEM 的定义
+5. IDEA 的 Database 操作可以看 [这里](https://github.com/judasn/IntelliJ-IDEA-Tutorial/blob/master/database-introduce.md)
+    > 十分推荐上面这个 IDEA 的教程 

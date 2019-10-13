@@ -18,7 +18,7 @@
 ### 精彩开源项目分享
 | 序号 |项目名称|项目亮点|时间|
 | ------ | :------: | ------ | ------ |
-|1||||
+|1|[EasyEE](https://github.com/service-java/summer-cli-mybatis/tree/ffa8d5532b73a98de26d29718c5c218450c50f79/__cant-run-now/EasyEE)|一个比较完整的web项目，可以快速了解spring-boot war包和jar包启动的区别，以及完整的后台页面与后端结合|2019年10月13日|
 
 ### 每日总结与导师建议
 | 序号 |每日总结|汇总人|导师建议|时间|

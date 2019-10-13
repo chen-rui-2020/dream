@@ -21,16 +21,16 @@ Arrangements based on my own situation.
 
 ### Already Done（10.13）
 
--[X] 学习markdown语法
+- [X] 学习markdown语法
 
--[X] maven本地配置，配置镜像加速maven加载速度。
+- [X] maven本地配置，配置镜像加速maven加载速度。
 
--[X] 安装tomcat，配置环境变量，IDEA配置tomcat
+- [X] 安装tomcat，配置环境变量，IDEA配置tomcat
 
--[X] 在IDEA创建简单Web项目并运行。
+- [X] 在IDEA创建简单Web项目并运行。
 
--[X] 学习GitHub协同合作，Fork后进行自己的修改，pull request进行更新和提交自己的修改到源项目，参与项目和让项目得到更好的发展。
+- [X] 学习GitHub协同合作，Fork后进行自己的修改，pull request进行更新和提交自己的修改到源项目，参与项目和让项目得到更好的发展。
 
--[ ] 学习比较齐全的IDEA介绍，包括新建项目等。 <https://github.com/judasn/IntelliJ-IDEA-Tutorial>
+- [ ] 学习比较齐全的IDEA介绍，包括新建项目等。 <https://github.com/judasn/IntelliJ-IDEA-Tutorial>
 
--[ ] 导入了项目 ssm-demo,还没有跑起来。
+- [ ] 导入了项目 ssm-demo,还没有跑起来。

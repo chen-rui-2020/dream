@@ -10,10 +10,10 @@
 6.循环练习，逐渐了解更多spring-boot细节，精益求精。 
 ### Level 2
 1.学会更多IDEA功能（可选插件、快捷键等）  
-2.系统梳理Spring-boot项目流程
+2.系统梳理Spring-boot项目流程  
 3.多练习运行几个demo，增加理解  
 ### Level 3  
-1.逐渐往spring-boot原理（IOC，面向切面等）靠拢
+1.逐渐往spring-boot原理（IOC，面向切面等）靠拢  
 2.尝试自己搭建一个项目
  
 ## 二、学习知识图谱  
@@ -25,8 +25,8 @@
 
 # 每日总结
 - 2019.10.12
-- [x] 完成Idea安装与配置，通过IDEA上传项目到github上
+  - [x] 完成Idea安装与配置，通过IDEA上传项目到github上
 - 2019.10.13
-- [x] 创建第一个HelloSpringboot项目，直观上感受了springboot程序运行过程；
-- [x] 复习了markdown语法继续熟悉IDEA的使用，发现它真的是一个很好的工具
-- [x] 发现一个[很适合初步感受Spring-boot流程的视频](https://www.bilibili.com/video/av39775932?from=search&seid=1289688835647095899)
+  - [x] 创建第一个HelloSpringboot项目，直观上感受了springboot程序运行过程；
+  - [x] 复习了markdown语法继续熟悉IDEA的使用，发现它真的是一个很好的工具
+  - [x] 发现一个[很适合初步感受Spring-boot流程的视频](https://www.bilibili.com/video/av39775932)

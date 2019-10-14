@@ -1,3 +1,4 @@
+#2019.10.14
 # Learning_plan  
 
 ## 一、学习Spring-boot框架  
@@ -30,3 +31,9 @@
   - [x] 创建第一个HelloSpringboot项目，直观上感受了springboot程序运行过程；
   - [x] 复习了markdown语法继续熟悉IDEA的使用，发现它真的是一个很好的工具
   - [x] 发现一个[很适合初步感受Spring-boot流程的视频](https://www.bilibili.com/video/av39775932)
+- 2019.10.14
+  - [x] 成功安装mysql数据库，并在IDEA上配置好环境成功连接
+  - [x] 熟悉了基本的mysql命令行，保留一份极简版本的[命令行大全](https://www.jianshu.com/p/14fc127f9663)以日后多多回顾
+  - [x] 在测试IDEA连接mysql之余回顾了部分sql语句
+  - [x] 继续练手HelloSpringboot项目，大概了解多url映射和参数传递
+  

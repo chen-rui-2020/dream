@@ -1,12 +1,31 @@
-# The-second-day
+# The-third-day
 
 ## Spring Boot Study-Plan
 
 Arrangements based on my own situation.
 
-多学多问！不要卡死在一个点上，换个角度思考。
+遇到问题学会解决，不要盲查。
 
 ---
+
+### Already Done（10.14）
+
+- [X] 学习IDEA介绍进度：基础设置（包括UI界面），索引和编译方式，了解但未背诵快捷键。
+
+- [X] 安装MySQL。
+
+- [X] Maven单模块的demo尝试:
+
+````
+- Checkout项目并导入
+- InteliJ IDEA Maven设置
+- 项目JDK设置
+- Spring配置
+- 数据库连接（频繁出错终于解决）
+- 数据库的初始化
+- 单元测试失败，应该是文件配置出错，还在解决中。
+````
+
 ### 方法
 - 通过<http://blog.didispace.com/spring-boot-learning-1/>教程入门Spring Boot
 
@@ -14,23 +33,10 @@ Arrangements based on my own situation.
 ---
 ### 计划 
 
->1. 学习使用IDEA，把相关教程介绍学完。
->2. 让导入项目运行起来。
->3. 对所学东西进行总结整理。
+>1. 解决问题，运行项目。
+>2. 跑多几个简单项目，熟练流程，
+>3. 多模块SpringMVC + Spring + Mybatis项目的demo尝试
+>4. Maven 的单模块Spring Boot 项目
+>5. 学习插件
 ---
 
-### Already Done（10.13）
-
-- [X] 学习markdown语法
-
-- [X] maven本地配置，配置镜像加速maven加载速度。
-
-- [X] 安装tomcat，配置环境变量，IDEA配置tomcat
-
-- [X] 在IDEA创建简单Web项目并运行。
-
-- [X] 学习GitHub协同合作，Fork后进行自己的修改，pull request进行更新和提交自己的修改到源项目，参与项目和让项目得到更好的发展。
-
-- [ ] 学习比较齐全的IDEA介绍，包括新建项目等。 <https://github.com/judasn/IntelliJ-IDEA-Tutorial>
-
-- [ ] 导入了项目 ssm-demo,还没有跑起来。

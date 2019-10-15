@@ -1,4 +1,4 @@
-# 2019.10.14
+# 2019.10.15
 # Learning_plan  
 
 ## 一、学习Spring-boot框架  
@@ -36,4 +36,7 @@
   - [x] 熟悉了基本的mysql命令行，保留一份极简版本的[命令行大全](https://www.jianshu.com/p/14fc127f9663)以日后多多回顾
   - [x] 在测试IDEA连接mysql之余回顾了部分sql语句
   - [x] 继续练手HelloSpringboot项目，大概了解多url映射和参数传递
+- 2019.10.15
+  - [x] 进一步熟悉IDEA的基本功能
+  - [x] 继续了解spring-boot的基本结构，解决了一个小疑惑[maven中的groupId和artifactId到底指的是什么？](https://blog.csdn.net/snowin1994/article/details/53024871)
   

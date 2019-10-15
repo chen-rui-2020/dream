@@ -1,4 +1,4 @@
-# The-third-day
+# The-fourth-day
 
 ## Spring Boot Study-Plan
 
@@ -8,33 +8,25 @@ Arrangements based on my own situation.
 
 ---
 
-### Already Done（10.14）
+### Already Done（10.15）
 
-- [X] 学习IDEA介绍进度：基础设置（包括UI界面），索引和编译方式，了解但未背诵快捷键。
+- [X] <https://github.com/ZHENFENG13/ssm-demo> 跑了里面得 ssm_maven 项目。
 
-- [X] 安装MySQL。
+   ！[ssm_maven 登陆系统]（D:/ssm_maven.png）
 
-- [X] Maven单模块的demo尝试:
+- [X] 尝试跑 ssm_demo，页面加载不出，还没有找到问题。ssm_demo没有用maven管理。
 
 ````
-- Checkout项目并导入
-- InteliJ IDEA Maven设置
-- 项目JDK设置
-- Spring配置
-- 数据库连接（频繁出错终于解决）
-- 数据库的初始化
-- 单元测试失败，应该是文件配置出错，还在解决中。
+今天运行 ssm_maven 时以 tomcat build 项目，一开始一直不成功，
+后来是因为项目得配置要求Tomcat7.0，而我的IDEA用的时Tomcat9.0，
+后来重新配了一下就运行起来了。版本得出错也要注意。
+
 ````
 
-### 方法
-- 通过<http://blog.didispace.com/spring-boot-learning-1/>教程入门Spring Boot
-
-- 通过复现运行他人的项目发掘学习框架
----
 ### 计划 
 
->1. 解决问题，运行项目。
->2. 跑多几个简单项目，熟练流程，
+>1. 继续跟进学习，多跑几个项目。
+>2. 理清思路，不懂得还是要多学多问。
 >3. 多模块SpringMVC + Spring + Mybatis项目的demo尝试
 >4. Maven 的单模块Spring Boot 项目
 >5. 学习插件

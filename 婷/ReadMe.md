@@ -12,7 +12,6 @@ Arrangements based on my own situation.
 
 - [X] <https://github.com/ZHENFENG13/ssm-demo> 跑了里面得 ssm_maven 项目。
 
-   ！[ssm_maven 登陆系统]（D:/ssm_maven.png）
 
 - [X] 尝试跑 ssm_demo，页面加载不出，还没有找到问题。ssm_demo没有用maven管理。
 

@@ -9,14 +9,14 @@ Fighting!
 5. 学习Maven 多模块项目。
 ---
 
-##进度
-
-####The first day(10.12)
+## 进度
+---
+#### The first day(10.12)
 1. 注册并学会使用GitHub，了解markdown语法。
 2. 下载安装配置IntelliJ IDEA
 
 ---
-####The second day(10.13)
+#### The second day(10.13)
 - [x] 学习markdown语法
 - [x] maven本地配置，配置镜像加速maven加载速度。
 - [x] 安装tomcat，配置环境变量，IDEA配置tomcat
@@ -26,7 +26,7 @@ Fighting!
 - [ ] 导入了项目 ssm-demo,还没有跑起来。
 
 ---
-####The third day(10.14)
+#### The third day(10.14)
 - [x] 安装MySQL
 - [x] 学习IDEA介绍：基础设置（包括UI界面），索引和编译方式，了解但未背诵快捷键
 - [x] Maven单模块 Spring MVC + Spring + Mybatis 的demo尝试
@@ -35,7 +35,7 @@ Fighting!
 > 单元测试出错，未解决问题 
 
 ---
-####The fourth day(10.15)
+#### The fourth day(10.15)
 - [x] 运行起<https://github.com/ZHENFENG13/ssm-demo>的ssm_maven项目
 ![ssm_maven](https://github.com/Yths0814/picture/blob/master/images/ssm_maven.png)
 ````
@@ -44,7 +44,7 @@ Fighting!
 后来重新配了一下就运行起来了。版本得出错也要注意。
 ````
 ---
-####The fifth day(10.16)
+#### The fifth day(10.16)
 - [X] 上课间隙看了一些 spring boot 的基本概念知识。了解项目目录结构，主要是java,resources和test
 
 - [X] 《SpringBoot学习目录》<http://blog.csdn.net/xuforeverlove/article/details/89635888> 详细基础，容易入门。
@@ -59,7 +59,7 @@ IDEA跑项目我的步骤：
 > 以tomcat build 项目，web项目会自动弹出页面
 ````
 ---
-####The sixth day(10.17)
+#### The sixth day(10.17)
 - [x] <https://github.com/judasn/Basic-Single-Module-SSM> 运行起 Maven单模块 Spring MVC + Spring + Mybatis 项目
 ![Basic-Single-Module-SSM](https://github.com/Yths0814/picture/blob/master/images/Basic-Single-Module-SSM.png)
  

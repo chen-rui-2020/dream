@@ -39,4 +39,10 @@
 - 2019.10.15
   - [x] 进一步熟悉IDEA的基本功能
   - [x] 继续了解spring-boot的基本结构，解决了一个小疑惑[maven中的groupId和artifactId到底指的是什么？](https://blog.csdn.net/snowin1994/article/details/53024871)
+- 2019.10.16
+  - [x] [了解何为Servlet容器](https://blog.csdn.net/yw_1207/article/details/78706701)
+  - [x] 为了更好地学习他人优秀的spring-boot项目，特意了解了一下前端框架Vue的基础
+- 2019.10.17
+  - [x] 大致了解了spring-boot体系中的Redis和Mybatis
+  - [x] 由于对spring-boot的注解不太理解，找了一份相对来说不错的[spring-boot常用注解](https://blog.csdn.net/yitian_66/article/details/80866571)
   

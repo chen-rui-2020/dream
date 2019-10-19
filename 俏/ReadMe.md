@@ -1,6 +1,16 @@
 # Spring-boot学习计划
 
 ### 每日更新，任重道远。
+###### 最新进度（update 10.19）
+- [x] 创建并运行一个spring-boot的“hello world”简单项目（10.19）
+ ![](./pic/helloworld.png)  
+ - 源代码如下  
+  ![](./pic/源码.png)
+  - 收获：  
+  1.复习了java SE的注解；  
+  2.了解了idea新建项目的操作，事实上idea基本是全自动的，一直next到所有文件夹都生成好给你，这与eclipse有较大的区别，我们只需要在已有的结构上添加即可；  
+  3.进一步了解了spring-boot的结构，例如发现maven整合了jar包；  
+  4.结合昨天运行的demo界面，有一点点灵感可以通过不断添加开发模块将helloworld转变成为多功能的界面(尚未验证)。
 
 ## 10月学习计划
 ### 1.spring-boot
@@ -10,15 +20,22 @@
 |2|结合教程细致分析代码及框架|
 |3|自己创建一个项目并运行|
 |4|总结分析与强化|
+
 ##### 进度跟踪1.1
-###### 最新进度
-- [x] 运行成功<https://github.com/ZHENFENG13/ssm-demo>的ssm_maven项目（10.18）
-![](./pic/ssm_demo首页.png)
-- 注意事项：重启后一定记得打开MySQL服务  
 ![](./pic/数据库状态.png)
 > 1.做计划的时候了解了spring-boot相关的知识结构体系，如mvc，mybatics，ssm，jackson等，暂时哈没有弄懂，计划在实际项目操作中重点熟悉相关知识点。  
 > 2.导入一个开源项目的demo，看的有点迷茫。（10.13）  
 > 3.开始导入师兄分享的demo，尝试运行它。（10.14）
+> 运行成功<https://github.com/ZHENFENG13/ssm-demo>的ssm_maven项目（10.18）  
+ ![](./pic/ssm_demo首页.png)
+>- 注意事项：重启后一定记得打开MySQL服务  
+##### 进度跟踪3.1
+> 1.创建并运行一个spring-boot的“hello world”简单项目（10.19）  
+![](./pic/helloworld.png)  
+> - 源代码如下  
+  ![](./pic/源码.png)
+>- 收获：1.复习了java SE的注解；2.了解了idea新建项目的操作，事实上idea基本是全自动的，一直next到所有文件夹都生成好给你，这与eclipse有较大的区别，我们只需要在已有的结构上添加即可；3.进一步了解了spring-boot的结构，例如发现maven整合了jar包；4.结合昨天运行的demo界面，有一点点灵感可以通过不断添加开发模块将helloworld转变成为多功能的界面。
+
 ### 2.Idea软件的使用
 | 阶段 | 项目计划 |
 | :------: | :------: |
@@ -37,7 +54,7 @@
 >> &#9733;&#9733;注意事项：
 > 1.安装完成后需配置环境变量CATALINA_BASE,CATALINA_HOME及Path。  
 > 2.启动时tomcat乱码需修改一下conf/logging.ptoperties的一个语句。
-> ![](./pic/tomcat乱码更正方法.png)
+![](./pic/tomcat乱码更正方法.png)
 ##### 进度跟踪2.2
 > 2.2.1了解markdown插件并学习了markdown语法。(10.12)  
 > 2.2.2了解git插件，并掌握从idea上传文件到github上面的方法。（10.13）  

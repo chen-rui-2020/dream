@@ -25,19 +25,9 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     - 根据问题回顾/补充第二阶段的知识
 
 ### 进度记录
-- 2019.10.12 第一阶段-第 1 日
-    - [x] 安装 IDEA （装了旗舰版的，还没激活，试用期用着先）
-    - [x] 在 IDEA 中新建 Maven 的 Web-App 项目顺利运行显示"Hello World!"（不求理解跟着步骤走很迷）
-    - [x] 修改了 IDEA 的 MAVEN 的 jar 源为阿里云的镜像，加快 build 速度（上个项目 build 了3分钟）
-    - [x] 导入了项目 ssm-demo（build 加快了很多；运行失败，没装 MySql）
-    - [x] 在 IDEA 设置 Github 账户（重点：File-Settings-Github, VCS）
-    - [x] 使用 Github 组织成员的工作流程（以前只用过个人的工作流程）
-- 2019.10.13 第一阶段-第 2 日
-    - [x] 安装 MySql （没有仔细看 ssm-demo 的开发环境介绍，装的是 8.0 的，倒是用 IDEA 的 DB 连接工具执行了脚本，但 demo 就是跑不起来。）
-        > 简要分析原因：MuSQL 5.x 和 8.0 有着飞跃的发展，jdbc 的驱动改变了，还有一些配置上的改变。pom.xml 改了依赖，数据库改了时区，建了新用户（root默认不能远程连接），还翻遍了互联网没找到解决的方法，也没能运行起来）
-    - [x] 了解到项目的运行/调试是有不同的方式，可以以 JUnit 或者 Tomcat 的方式来运行
-    - [x] 运行起 ssm-demo（忧愁）
-        ![运行界面图](./img/run.png)
+- 2019.10.19 第一阶段-第 4 日
+    - [x] 了解并实践了 SpringBoot 项目的 [三种创建方式](#SpringBoot相关)
+
 - 2019.10.14 第一阶段-第 3 日（今日总结：一事无成，大项目还是比较难跑起来的，还是走走小 DEMO 吧）
     - [x] 学会 IDEA 一个 window 显示多个项目（原因见 [注意/IDEA 相关](#idea相关)）
         > 勉强实现，不太理想，通过导入多个 module 的方法
@@ -48,11 +38,25 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
         > 为什么需要真正的项目地址？
         >
         > 1. 可以直接用 IDEA 的 New -> Project from version control -> Git 来 **直接** 导入项目
-        >   > 实际体验不佳，原因？ GitHub 仓库不一定就是该项目的根目录，可能是多项目的集合。难道是创建项目的姿势不是很对？
+        >       > 实际体验不佳，原因？ GitHub 仓库不一定就是该项目的根目录，可能是多项目的集合。难道是创建项目的姿势不是很对？
         > 2. 原项目是某个学习后端技术的人把 GitHub 上面的某些项目集合在一起的，文件夹层次比较深，不是很方便，而且按理来说文件较大
         （趣事：项目文件夹为 `__cant-run-now` 是不是仓库拥有者还不能跑起来这个项目 :joy: ）
-- 2019.10.15 第一阶段-第 4 日
+- 2019.10.13 第一阶段-第 2 日
+    - [x] 安装 MySql （没有仔细看 ssm-demo 的开发环境介绍，装的是 8.0 的，倒是用 IDEA 的 DB 连接工具执行了脚本，但 demo 就是跑不起来。）
+        > 简要分析原因：MuSQL 5.x 和 8.0 有着飞跃的发展，jdbc 的驱动改变了，还有一些配置上的改变。pom.xml 改了依赖，数据库改了时区，建了新用户（root默认不能远程连接），还翻遍了互联网没找到解决的方法，也没能运行起来）
+    - [x] 了解到项目的运行/调试是有不同的方式，可以以 JUnit 或者 Tomcat 的方式来运行
+    - [x] 运行起 ssm-demo（忧愁）
+        ![运行界面图](./img/run.png)
+- 2019.10.12 第一阶段-第 1 日
+    - [x] 安装 IDEA （装了旗舰版的，还没激活，试用期用着先）
+    - [x] 在 IDEA 中新建 Maven 的 Web-App 项目顺利运行显示"Hello World!"（不求理解跟着步骤走很迷）
+    - [x] 修改了 IDEA 的 MAVEN 的 jar 源为阿里云的镜像，加快 build 速度（上个项目 build 了3分钟）
         
+        如果出现使用 `mvn install:` 命令失败的话需要回想自己修改源的时候有没有把 `<localRepository>` 的节点删除了，
+        如果是的话可以按照 [这里](https://www.cnblogs.com/libingbin/p/5949483.html) 添加回去，只要去掉相关节点注释就可以，作者的 F 盘不一定适合你 
+    - [x] 导入了项目 ssm-demo（build 加快了很多；运行失败，没装 MySql）
+    - [x] 在 IDEA 设置 Github 账户（重点：File-Settings-Github, VCS）
+    - [x] 使用 Github 组织成员的工作流程（以前只用过个人的工作流程）
 
 ### 注意
 ##### MySQL 的安装
@@ -82,4 +86,104 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     一般来说，IDEA 的 Maven 安装在 `C:/Program Files/JetBrains/IntelliJ IDEA 2019.2.3/plugins/` 文件夹内
     （取决于安装时的选项，还可以在 IDEA 的 `Settings->Build, Execution, Deployment->Maven->Maven home directory` 中查看到具体的目录），
     只需要在该文件夹里找到 Maven 的 `/bin` 目录，添加到系统变量之后重启电脑使之生效即可（可以注意到这里装了 maven2 和 maven3 两个版本）
-3. 
+3. 如果不想在打开 IDEA 的时候就自动打开最近的项目，可以按如下设置
+    
+    取消勾选 `File => Settings => System Settings => Startup/Shutdowm` 里面的项目
+    
+    设置后打开 IDEA 时会让你选择需要打开的项目
+    
+#### SpringBoot相关
+1. 三种创建方式
+    1. 在 IDEA 中创建一个 Spring Initializr 项目（必须联网）
+        
+        > 实际上就是第三种方法的一种便捷方式，在创建项目时可看到 `Choose Initializr Service URL` 指向的就是 [start.spring.io](https://start.spring.io/)
+        
+        其中，在 `项目/src/main/java/包名/xxxxApplication` 中由 `@SpringBootApplication` 注释指明了本 Web 项目的启动类，并在 `main` 函数中调用 `SpringApplication.run()` 启动项目
+        
+        一个控制器类的例子
+        ```java
+        package com.tindoc.springbootstart;
+        
+        import org.springframework.web.bind.annotation.GetMapping;
+        import org.springframework.web.bind.annotation.RestController;
+        
+        @RestController // 处理http请求；等同于 @Controller + @ResponseBody
+        public class HelloWorld {
+            @GetMapping ("/hello") // 映射 /hello 的 get 方法
+            public String hello() {
+                return "Hello, SpringBootStart_initializr.";
+            }
+        }
+       ```
+        
+        > 小问题，使用这种模式下创建的项目的 artifactId 不允许含有大写字母，原因不详
+             
+    2. 在 IDEA 中创建一个 Maven 项目，手动加入 Spring 的依赖
+        
+        创建完项目之后的区别如下图：（左边为创建完 Spring Initializr 项目的项目结构，右边为 Maven 项目的项目结构）
+        
+        ![区别](./img/diff.jpg)
+        
+        可以看出差异还是很大的，比较重要的是
+        - 缺少启动类 xxxxApplication.calss
+        - resources 文件夹缺少 application.properties 配置文件
+        - 在 External Libraries 中只有 java 1.8 的 jar 包
+        - pom.xml 中缺少了很多配置
+        
+        **那如何使一个 Maven 项目变成一个 SpringBoot 项目？**
+        1. 在文件 pom.xml 中添加 SpringBoot 的引用，至少需要以下三个
+            ```xml
+           <!-- 添加 java 版本属性 -->
+           <properties>
+               <java.version>1.8</java.version>
+           </properties>
+           
+           <!-- 添加 SpringBoot 的父项目 -->
+           <parent>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-parent</artifactId>
+               <version>2.2.0.RELEASE</version>
+           </parent>
+       
+           <!-- 手动添加依赖 -->
+           <dependencies>
+               <dependency>
+                   <groupId>org.springframework.boot</groupId>
+                   <artifactId>spring-boot-starter-web</artifactId>
+               </dependency>
+           </dependencies>
+       
+           <!-- 手动添加 Spring Boot Maven 插件 -->
+           <build>
+               <plugins>
+                   <plugin>
+                       <groupId>org.springframework.boot</groupId>
+                       <artifactId>spring-boot-maven-plugin</artifactId>
+                   </plugin>
+               </plugins>
+           </build>
+            ```
+           编写完 pom.xml 之后 IDEA 就会引入指明的 jar 包到 External Libraries 中
+        2. 添加启动器类
+            ```java
+           package appStart;
+           
+           import org.springframework.boot.SpringApplication;
+           import org.springframework.boot.autoconfigure.SpringBootApplication;
+           
+           @SpringBootApplication // 指明启动类
+           public class Start {
+               public static void main(String[] args) {
+                   SpringApplication.run(Start.class, args);   // 说明运行哪一个类
+               }
+           }
+            ```
+        
+    3. 在 [start.spring.io](https://start.spring.io/) 中下载模板，再在 IDEA 中导入该项目
+        
+        与第一种方式基本一致，要注意：
+        
+        如果在导入的最后一步指定了其他的项目文件夹的话，IDEA 不会自动将导入的项目复制到新的文件夹，而是链接了起来，**所以不能删除原导入项目，最好的做法就是不要修改文件夹**
+            
+        > 可以理解为，最后一步并不能将文件移动到一个新的文件夹，只是复制了一份 .idea 这个文件夹到新的文件夹 
+        

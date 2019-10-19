@@ -1,42 +1,75 @@
-# The-third-day
+# Spring Boot Study-Plan
+Fighting!
 
-## Spring Boot Study-Plan
-
-Arrangements based on my own situation.
-
-遇到问题学会解决，不要盲查。
-
----
-
-### Already Done（10.14）
-
-- [X] 学习IDEA介绍进度：基础设置（包括UI界面），索引和编译方式，了解但未背诵快捷键。
-
-- [X] 安装MySQL。
-
-- [X] Maven单模块的demo尝试:
-
-````
-- Checkout项目并导入
-- InteliJ IDEA Maven设置
-- 项目JDK设置
-- Spring配置
-- 数据库连接（频繁出错终于解决）
-- 数据库的初始化
-- 单元测试失败，应该是文件配置出错，还在解决中。
-````
-
-### 方法
-- 通过<http://blog.didispace.com/spring-boot-learning-1/>教程入门Spring Boot
-
-- 通过复现运行他人的项目发掘学习框架
----
 ### 计划 
-
->1. 解决问题，运行项目。
->2. 跑多几个简单项目，熟练流程，
->3. 多模块SpringMVC + Spring + Mybatis项目的demo尝试
->4. Maven 的单模块Spring Boot 项目
->5. 学习插件
+1. 安装好IDEA,MySQL,配置好环境。初步了解IDEA。
+2. 跟着教程导入项目，运行起来。
+3. 多跑几个项目，总结步骤，细化每一个步骤。
+4. 扎实基础，学习Spring Boot 
+5. 学习Maven 多模块项目。
 ---
 
+## 进度
+---
+#### The first day(10.12)
+1. 注册并学会使用GitHub，了解markdown语法。
+2. 下载安装配置IntelliJ IDEA
+
+---
+#### The second day(10.13)
+- [x] 学习markdown语法
+- [x] maven本地配置，配置镜像加速maven加载速度。
+- [x] 安装tomcat，配置环境变量，IDEA配置tomcat
+- [x] 在IDEA创建简单Web项目并运行。
+- [x] 学习GitHub协同合作，Fork后进行自己的修改，pull request进行更新和提交自己的修改到源项目，参与项目和让项目得到更好的发展。
+- [ ] 学习比较齐全的IDEA介绍，包括新建项目等。 https://github.com/judasn/IntelliJ-IDEA-Tutorial
+- [ ] 导入了项目 ssm-demo,还没有跑起来。
+
+---
+#### The third day(10.14)
+- [x] 安装MySQL
+- [x] 学习IDEA介绍：基础设置（包括UI界面），索引和编译方式，了解但未背诵快捷键
+- [x] Maven单模块 Spring MVC + Spring + Mybatis 的demo尝试
+> 数据库连接
+> 数据库初始化
+> 单元测试出错，未解决问题 
+
+---
+#### The fourth day(10.15)
+- [x] 运行起<https://github.com/ZHENFENG13/ssm-demo>的ssm_maven项目
+![ssm_maven](https://github.com/Yths0814/picture/blob/master/images/ssm_maven.png)
+````
+今天运行 ssm_maven 时以 tomcat build 项目，一开始一直不成功，
+后来是因为项目得配置要求Tomcat7.0，而我的IDEA用的时Tomcat9.0，
+后来重新配了一下就运行起来了。版本得出错也要注意。
+````
+---
+#### The fifth day(10.16)
+- [X] 上课间隙看了一些 spring boot 的基本概念知识。了解项目目录结构，主要是java,resources和test
+
+- [X] 《SpringBoot学习目录》<http://blog.csdn.net/xuforeverlove/article/details/89635888> 详细基础，容易入门。
+
+````
+IDEA跑项目我的步骤：
+> 导入项目
+> maven(w我是手动配置)
+> Database, new 一个schema, 然后给自己的数据库命名
+> 运行数据库脚本，记得勾选上一步新建的数据库命，把表建在自己新建的数据库里
+> 测试，会出错
+> 以tomcat build 项目，web项目会自动弹出页面
+````
+---
+#### The sixth day(10.17)
+- [x] <https://github.com/judasn/Basic-Single-Module-SSM> 运行起 Maven单模块 Spring MVC + Spring + Mybatis 项目
+![Basic-Single-Module-SSM](https://github.com/Yths0814/picture/blob/master/images/Basic-Single-Module-SSM.png)
+ 
+  解决之前单元测试不通过问题，是因为MySQL版本问题。
+- [x] 项目设置：JDK设置；Facet 加入 Spring（还不是很理解）
+- [x] 代码相关
+> 简单了解pom.xml文件
+> 用InteliJ IDEA 的 Database 初始化数据库
+> 单元测试（数据库版本问题导致第三天单元测试不通过，更改后成功连接数据库，单元测试通过）
+> 启动 Tomcat 加上 Make Project 事件
+> 访问 Controller 了解 Debug
+> 静态资源映射，比如做图片上传等，如没有映射好可能遇到404
+- [ ] MyBatis插件的使用

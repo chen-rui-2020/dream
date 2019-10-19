@@ -45,4 +45,10 @@
 - 2019.10.17
   - [x] 大致了解了spring-boot体系中的Redis和Mybatis
   - [x] 由于对spring-boot的注解不太理解，找了一份相对来说不错的[spring-boot常用注解](https://blog.csdn.net/yitian_66/article/details/80866571)
-  
+- 2019.10.18
+  - [x] 了解到了spring-boot的两种配置文件（properties文件和yml文件）的基础语法和基本用法。记录一下配置文件的作用是：修改springboot在底层为我们配置好了的默认值
+  - [x] 自定义一个Person类，在yml文件配置其属性，然后在尝试在测试类中输出其toString()的值，但是失败了，test类中各种报错，尝试许久也无法解决，只能等到第二天再继续研究了
+- 2019.10.19
+  - [x] 解决了前一天遗留下来的无法运行test类的问题，原来spring-boot的自动导包技术有时会失灵，会通过maven导入一些不需要的jar包，而真正需要用到的包却不会自动下载。我的解决办法比较笨：删除项目中所有依赖的包，再通过Maven Reimport 
+  - [x] 遇到一个无法注入bean的问题（明明代码是没有问题的呀.....）折腾许久终于明白Spring-boot自动扫描包成功与否与包路径的位置密切相关（注意存放自定义类的bean包与主程序类要在同一文件夹）具体看[关于SpringBoot bean无法注入的问题（与文件包位置有关）改变自动扫描的包](https://blog.csdn.net/u014695188/article/details/52263903)
+  - [x] 了解到了更多配置文件的用法，尝试与理解Springboot自动配置文件的原理（懵懵懂懂的.....）

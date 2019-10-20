@@ -2,7 +2,7 @@
 
 ### 原则
 > 先确立几个原则，每天开始学习前大声读三遍！三遍！三遍！
-- 莫得完美，~~完成第一~~ 做好记录
+- 莫得完美，做好记录
 - 每天结束时根据当天学习的内容调整、补充计划
 
 ### 说明
@@ -15,8 +15,7 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
 
 ### 计划
 - 第一阶段：尝个甜头
-    - 以能正常运行 [ZHENFENG13/ssm-demo](https://github.com/ZHENFENG13/ssm-demo) 为最终目标了解 SSM 使用到的工具（IDEA, Maven, MyBatis 等）
-    - ~~跟随项目作者的教程走一篇，从0开始搭建，代码可复制/粘贴。注重开发的流程以及工具的深入了解。~~（我觉得该项目并不初学者友好）
+    - 以能正常运行 [ZHENFENG13/ssm-demo](https://github.com/ZHENFENG13/ssm-demo) 为最终目标了解 SSM 使用到的工具（我觉得该项目并不初学者友好）
     - 多找几个 Demo 熟悉 IDEA 各工具以及技术的使用，暂学习 [IntelliJ-IDEA-Tutorial](https://github.com/judasn/IntelliJ-IDEA-Tutorial) 里的 Demo
 - 第二阶段：扎实基础
     - 以 [纯洁的微笑](http://www.ityouknow.com/spring-boot.html) 的 Spring Boot 教程为主线了解 Spring Boot
@@ -26,7 +25,7 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
 
 ### 进度记录
 - 2019.10.20 第一阶段-第 5 日
-    - [ ] 使用外部 Tomcat 运行起使用 Spring Initializr 创建的项目
+    - [x] 使用外部 Tomcat 运行起 Spring Initializr 创建的项目（貌似与外部 Tomcat 的版本有关，9.0 可正常运行，7.0 无效。猜测：内置 Tomcat 版本有关）
     - [ ] 完成 [IntelliJ-IDEA-Tutorial](https://github.com/judasn/IntelliJ-IDEA-Tutorial)
 - 2019.10.19 第一阶段-第 4 日
     - [x] 了解并实践了 SpringBoot 项目的 [三种创建方式](#SpringBoot相关)
@@ -84,10 +83,10 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
 > [1](https://github.com/judasn/IntelliJ-IDEA-Tutorial)
 >
 > [2](https://www.cnblogs.com/jajian/category/1280011.html)
-1. 单 IDEA 窗口需要显示多个项目的原因（仅个人认为，暂时没找到很好的办法解决）
+1. ~~单 IDEA 窗口需要显示多个项目的原因（仅个人认为，暂时没找到很好的办法解决）~~ 请不要有这种想法，请使用更好的方法
     - 多个 Project 之间不共享数据库连接这些，每个项目都配置一次麻烦
     - 每次切换多个 IDEA 窗口比较麻烦，单窗口的话可以在标签之间切换
-2. IDEA 安装插件的实际意义就是安装对应的软件，以 Maven 举例
+2. IDEA 安装插件的实际意义 **不是** 单纯安装对应的软件，常用的 Tomcat 和 Git 也没有，但 Maven 却有
 
     由于旗舰版的 IDEA 安装时默认勾选了 Maven，所以在安装的时候就已经把 Maven 装上了，
     想要在 Windows 的终端中执行 mvn 命令的话只需要设置 PATH 即可，无需手动安装 Maven，
@@ -104,13 +103,39 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
         - `idea<64/无>.exe.vmoptions` : 可执行文件的 VM 配置文件（大概是配置 VM 怎么执行可执行文件，即设置执行时的一些参数）
         - `idea.properties` : IDEA 的属性配置文件
         > 建议使用 Help->Edit Custom VM Options 和 Help->Edit Custom Properties 来修改，具体修改参考 [这里](https://github.com/judasn/IntelliJ-IDEA-Tutorial/blob/master/installation-directory-introduce.md)
-    - **用户设置** 一般在当前用户的 Home 目录（Winodws 为 `%userprofile%`，Mac/Linux 为 `~`）的 `.IntelliJIdea<版本>` 文件夹，如果配置到不可理解的阶段，可以删除掉整个文件夹，IDEA 会重新创建一个，恢复到默认状态
+    - **用户设置** 一般在当前用户的 Home 目录（Winodws 为 `%userprofile%`，Mac/Linux 为 `~`）的 `.IntelliJIdea<版本>` 文件夹里，如果配置到不可理解的阶段，可以删除掉整个文件夹，IDEA 会重新创建一个，恢复到默认状态
         - `config` : IDEA 个性化化配置目录，或者说是整个 IDE 设置目录。主要记录了：IDE 主要配置功能、自定义的代码模板、自定义的文件模板、自定义的快捷键、Project 的 tasks 记录等等个性化的设置（安装不同版本时可导入这些设置）
         - `system` : IDEA 系统文件目录，里面主要有：缓存、索引、容器文件输出等等
 5. 修改编码
-    File->Settings->Editor->File Encodings 建议全部设置为 UTF-8 。另，勾选 Properties Files->Transparent native-to-ascii conversion 把 properties 文件的中文显示出来
-6. 
+
+    File->Settings->Editor->File Encodings 建议全部设置为 UTF-8
     
+    另，勾选 Properties Files->Transparent native-to-ascii conversion 把 properties 文件的中文显示出来
+6. 重要的快捷键
+    - `Ctrl + D` 复制光标所在行 或 复制选择内容，并把复制内容插入光标位置下面
+    - `Ctrl + Y` 删除光标所在行 或 删除选中的行
+    - `Ctrl + +` 展开代码
+    - `Ctrl + -` 折叠代码
+    - `Ctrl + /` 注释光标所在行代码，会根据当前不同文件类型使用不同的注释符号
+    - `Ctrl + End` 跳到文件尾
+    - `Ctrl + Home` 跳到文件头
+    - `Ctrl + Space` 基础代码补全，默认在 Windows 系统上被输入法占用，需要进行修改，建议修改为 Ctrl + 逗号
+    - **`Alt + Enter` IntelliJ IDEA 根据光标所在问题，提供快速修复选择，光标放在的位置不同提示的结果也不同**
+    - `Alt + Insert` 代码自动生成，如生成对象的 set/get 方法，构造函数，toString() 等
+    - `Shift + F6` 对文件/文件夹重命名（Refactor->Rename）
+    - `Ctrl + Alt + L` 格式化代码，可以对当前文件和整个包目录使用
+    - `Ctrl + Shift + F` 根据输入内容查找整个项目 或 指定目录内文件
+    - `Ctrl + Shift + R` 根据输入内容替换对应内容，范围为整个项目 或 指定目录内文件
+    Debug 用
+    - `F7` 进入下一步，如果当前行断点是一个方法，则进入当前方法体内，如果该方法体还有方法，则不会进入该内嵌的方法中
+    - `F8` 进入下一步，如果当前行断点是一个方法，则不进入当前方法体内
+    - `F9` 恢复程序运行，但是如果该断点下面代码还有断点则停在下一个断点上
+    - `Alt + F8` 选中对象，弹出可输入计算表达式调试框，查看该输入内容的调试结果
+7. IDEA 里两种代码模板功能实现
+    - Live Templates
+    - Postfix Completion
+
+      
 #### SpringBoot相关
 1. 三种创建方式
     1. 在 IDEA 中创建一个 Spring Initializr 项目（必须联网）
@@ -136,6 +161,8 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
        ```
         
         > 小问题，使用这种模式下创建的项目的 artifactId 不允许含有大写字母，原因不详
+        >
+        > 使用这种方式创建的项目默认使用的是 Spring Boot 项目中内嵌的 Tomcat 来运行（SpringBoot 2.2.0 Release 对应的是 Tomcat 9.0）
              
     2. 在 IDEA 中创建一个 Maven 项目，手动加入 Spring 的依赖
         
@@ -210,9 +237,10 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     windows 使用 `netstat -aon|findstr "8080` 来查看监听端口号为8080的进程，就可以使用 `tskill` 来强制关闭进程或使用任务管理器关闭
 3. 启动方式
     1. 如果使用 Spring Initializr 创建的项目默认使用 Spring Boot 内置的 Tomcat 来运行，不需要设置 Tomcat
-    2. 如果想使用非 Spring Boot 内置的 Tomcat 来运行的话，需要完成以下步骤  **暂未实现**
-        [参考](https://blog.csdn.net/fanshukui/article/details/80258793)
+    2. 如果想使用非 Spring Boot 内置的 Tomcat 来运行的话，需要完成以下步骤（外部 Tomcat 的版本为 9.0 可成功运行，其他版本不行，原因不详）
+        [参考](https://blog.csdn.net/fanshukui/article/details/80258793)（1. 修改启动类；2. 在 pom.xml 中去掉内嵌 Tomcat 的依赖和指明打包类型）
     
 #### Tomcat 相关
 1. Tomcat 启动乱码
     修改 `Tomcat安装目录/conf/logging.properties` 下的  `java.util.logging.ConsoleHandler.encoding = utf-8` 改为 GBK 即可
+    > 或在 Run->Edit Configurations->Tomcat server->VM Options 加上 `-Dfile.encoding=UTF-8` （未经测试）

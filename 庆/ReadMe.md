@@ -24,12 +24,15 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     - 根据问题回顾/补充第二阶段的知识
 
 ### 进度记录
+- 2019.10.21 第一阶段-第 6 日
+    - [ ] 完成 [IntelliJ-IDEA-Tutorial](https://github.com/judasn/IntelliJ-IDEA-Tutorial) 的 Demo 项目
+    - [ ] 开始第二阶段
 - 2019.10.20 第一阶段-第 5 日
     - [x] 使用外部 Tomcat 运行起 Spring Initializr 创建的项目（貌似与外部 Tomcat 的版本有关，9.0 可正常运行，7.0 无效。猜测：内置 Tomcat 版本有关）
-    - [ ] 完成 [IntelliJ-IDEA-Tutorial](https://github.com/judasn/IntelliJ-IDEA-Tutorial)
+    - [x] 完成 [IntelliJ-IDEA-Tutorial](https://github.com/judasn/IntelliJ-IDEA-Tutorial)
 - 2019.10.19 第一阶段-第 4 日
     - [x] 了解并实践了 SpringBoot 项目的 [三种创建方式](#SpringBoot相关)
-    - [x] 知道了开发后台：PostMan 软件和 Swagger 包
+    - [x] 知道了后台接口应用开发工具：PostMan 软件、 Swagger 包、IDEA 自带的 Rest Client（Tools->Http Client->Test RESTful Web Service）
 
 - 2019.10.14 第一阶段-第 3 日（今日总结：一事无成，大项目还是比较难跑起来的，还是走走小 DEMO 吧）
     - [x] 学会 IDEA 一个 window 显示多个项目（原因见 [注意/IDEA 相关](#idea相关)）
@@ -93,11 +96,6 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     一般来说，IDEA 的 Maven 安装在 `C:/Program Files/JetBrains/IntelliJ IDEA 2019.2.3/plugins/` 文件夹内
     （取决于安装时的选项，还可以在 IDEA 的 `Settings->Build, Execution, Deployment->Maven->Maven home directory` 中查看到具体的目录），
     只需要在该文件夹里找到 Maven 的 `/bin` 目录，添加到系统变量之后重启电脑使之生效即可（可以注意到这里装了 maven2 和 maven3 两个版本）
-3. 如果不想在打开 IDEA 的时候就自动打开最近的项目，可以按如下设置
-    
-    取消勾选 `File->Settings->System Settings->Startup/Shutdowm` 里面的项目
-    
-    设置后打开 IDEA 时会让你选择需要打开的项目
 4. IDEA 的两个重要目录
     - 安装目录中 `C:\Program Files\JetBrains\IntelliJ IDEA <版本>\bin` 有两个重要的文件
         - `idea<64/无>.exe.vmoptions` : 可执行文件的 VM 配置文件（大概是配置 VM 怎么执行可执行文件，即设置执行时的一些参数）
@@ -134,6 +132,19 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
 7. IDEA 里两种代码模板功能实现
     - Live Templates
     - Postfix Completion
+8. 其他 [自定义设置](https://github.com/judasn/IntelliJ-IDEA-Tutorial/blob/master/settings-recommend-introduce.md)
+    - 鼠标滚轮放大/缩小编辑器字体： 勾选 `Settings->General->Editor->Mouse->Change Font Size(Zoom) with Ctrl+Mouse Wheel`
+    - 编辑器软换行：在编辑器中点击鼠标右键选择 `Soft-Wrap`
+    - 打开 IDEA 时可选择打开的项目而不是打开最近的项目：取消勾选 `File->Settings->System Settings->Startup/Shutdowm` 里面的项目
+    - 生成 serialVersionUID：`Settings->Editor->Inspections->勾选 Serializable class without serialVersionUID` （作用：在实现 Serializable 接口的类没有添加 serialVersionUID 时警告，这时可以利用 Alt+Enter 智能填充来添加 serialVersionUID ）
+    - 快速定位当前文件所在项目结构中的位置：`Alt + F1 + 1`
+9. 优秀插件推荐
+    [参考](https://github.com/judasn/IntelliJ-IDEA-Tutorial/blob/master/plugins-settings.md)
+10. Java 热部署
+    
+    可使用 JRebel 插件（付费），具体参考 [这里](https://github.com/judasn/IntelliJ-IDEA-Tutorial/blob/master/jrebel-setup.md)
+    
+     
 
       
 #### SpringBoot相关
@@ -234,6 +245,7 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
             
         > 可以理解为，最后一步并不能将文件移动到一个新的文件夹，只是复制了一份 .idea 这个文件夹到新的文件夹 
 2. 如果使用 Maven 打包为 jar 包，再使用 `java -jar xxx.jar` 运行时，需要注意可能不能正常关闭项目
+
     windows 使用 `netstat -aon|findstr "8080` 来查看监听端口号为8080的进程，就可以使用 `tskill` 来强制关闭进程或使用任务管理器关闭
 3. 启动方式
     1. 如果使用 Spring Initializr 创建的项目默认使用 Spring Boot 内置的 Tomcat 来运行，不需要设置 Tomcat
@@ -242,5 +254,33 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     
 #### Tomcat 相关
 1. Tomcat 启动乱码
+
     修改 `Tomcat安装目录/conf/logging.properties` 下的  `java.util.logging.ConsoleHandler.encoding = utf-8` 改为 GBK 即可
     > 或在 Run->Edit Configurations->Tomcat server->VM Options 加上 `-Dfile.encoding=UTF-8` （未经测试）
+
+#### Maven 相关
+1. Maven 的意义
+
+    项目依赖管理（将多个项目用到的 jar 包统一在本地仓库，不需要重复复制、粘贴、保存） + 提供项目结构、目录结构的标准（利于项目的传播与学习）
+2. Maven 的配置
+
+    配置文件所在地址： `Maven安装目录\maven<版本号>\conf\settings.xml` **or** `C:\Users\<用户名>\.m2\settings.xml`
+    
+    建议：修改安装目录下的 `conf/settings.xml` 文件，并将内容复制到 `C:\Users\<用户名>\.m2\settings.xml` 中（因为多数软件利用的是这个配置文件，是全局配置文件）
+    > 配置文件中比较重要的是 **本地仓库** 的地址（即下载的 jar 包存放位置）
+    >
+    > `<localRepository>/path/to/local/repo</localRepository>`
+    > 
+    > 默认为 `${user.home}/.m2/repository` 建议修改为其他路径，有建议说放置在 Maven 的安装目录下
+
+#### 其他
+1. 绿色安装版软件
+    
+    使用非 exe 程序安装的软件，多数只要 解压+设置环境变量 就可以正常使用，例如：jdk, Tomcat, Maven
+    
+2. 如何配置环境变量（用命令行实现）？
+    - Linux: `setenv('JAVA_HOME','C:\Java\jdk<版本>');` + `setenv('PATH', [getenv('PATH') ';目录']);` （当然，目录可以是 环境变量名，例如 `%JAVA_HOME%\bin`）
+    - Windows: `setx JAVA_HOME "C:\Java\jdk<版本>" /m` + `setx PATH "%PATH%;目录" /m` 
+        > 其中，`/m` 指明为设置系统变量而不是本地(用户)环境变量，加双引号是避免 Windows 目录中空格的影响。[参考](https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/setx)。另，设置后在当前终端使用 `echo %JAVA_HOME%` 会显示设置前的值，需要打开一个新的终端才可查看到
+    
+    

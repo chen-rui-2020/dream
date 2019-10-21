@@ -24,8 +24,23 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     - 根据问题回顾/补充第二阶段的知识
 
 ### 进度记录
+- 2019.10.22 第一阶段-第 7 日
+
 - 2019.10.21 第一阶段-第 6 日
     - [ ] 完成 [IntelliJ-IDEA-Tutorial](https://github.com/judasn/IntelliJ-IDEA-Tutorial) 的 Demo 项目
+        - [x] [单模块](https://github.com/judasn/IntelliJ-IDEA-Tutorial/blob/master/maven-java-web-project-introduce.md)成功运行
+        ![run](./img/run.png)
+        > 运行步骤：
+        >  1. 部署数据库
+        >      
+        >      该作者的数据库脚本 `doc/db/init.sql` 包括了创建数据库实例和用户以及用户对应密码的 SQL，所以不需要修改 `/src/main/resources/properties/config.properties` 的数据库连接配置（当然改脚本再改配置也行）
+        >  2. 修改 MySQL 驱动 jar 包位置（因为作者建议直接下载打包好的 jar 包到指定位置，看 `环境相关/建议你也跟我一样xxxx` ）
+        >  
+        >      修改项目中 `/src/main/resources/spring/mybatis-generator-config.xml` 中的 `<classPathEntry location="xxxx" />` 值，指向 MySQL 驱动 jar 包位置
+        >      > 如果没有修改或在 IDEA Maven 设置中覆盖过 Maven 的本地仓库地址的话，一般是在 `C:\Users\<用户名>\.m2\repository\mysql\<版本>\mysql-connector-java-<版本号>.jar` 里面，该 repository 目录保存的就是 IDEA 管理的所有的 jar 包 
+        >      
+        >      如果数据库不在本地的还需要修改本文件中的 `<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://<数据库 IP 地址>/ssm" userId="ssm" password="ssm"/>` （本应使用读取属性的方式来读入会更好）
+        - [ ] 多模块成功运行 
     - [ ] 开始第二阶段
 - 2019.10.20 第一阶段-第 5 日
     - [x] 使用外部 Tomcat 运行起 Spring Initializr 创建的项目（貌似与外部 Tomcat 的版本有关，9.0 可正常运行，7.0 无效。猜测：内置 Tomcat 版本有关）
@@ -51,8 +66,7 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     - [x] 安装 MySql （没有仔细看 ssm-demo 的开发环境介绍，装的是 8.0 的，倒是用 IDEA 的 DB 连接工具执行了脚本，但 demo 就是跑不起来。）
         > 简要分析原因：MuSQL 5.x 和 8.0 有着飞跃的发展，jdbc 的驱动改变了，还有一些配置上的改变。pom.xml 改了依赖，数据库改了时区，建了新用户（root默认不能远程连接），还翻遍了互联网没找到解决的方法，也没能运行起来）
     - [x] 了解到项目的运行/调试是有不同的方式，可以以 JUnit 或者 Tomcat 的方式来运行
-    - [x] 运行起 ssm-demo（忧愁）
-        ![运行界面图](./img/run.png)
+    - [x] 运行起 ssm-demo
 - 2019.10.12 第一阶段-第 1 日
     - [x] 安装 IDEA （装了旗舰版的，还没激活，试用期用着先）
     - [x] 在 IDEA 中新建 Maven 的 Web-App 项目顺利运行显示"Hello World!"（不求理解跟着步骤走很迷）
@@ -68,8 +82,9 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
 ##### MySQL 的安装
 1. 到 [官网](https://dev.mysql.com/downloads/) 下载社区版
     > 虽然 MySQL 是开源的，但也提供企业版。下载时默认版本是 8.0 ，下载界面右侧可选其他版本
-2. 安装时只需选择安装 'Server only' 即可，因为可以通过 IDEA 来管理，不需要像以前装 sqldevelper(Oracle), SSMS(SQL Server) 这些 GUI 的管理工具
-    ![安装时选择设置类型](./img/installSel.png)
+2. 安装时只需选择安装 'Server only' 即可
+
+    因为可以通过 IDEA 来管理，不需要像以前装 sqldevelper(Oracle), SSMS(SQL Server) 这些 GUI 的管理工具
 3. 安装时请创建一个用户，默认 root 用户是不能远程连接的，但是可以修改，关键词是 “开启远程访问”、“host” 等
     > 如果用不到远程连接可以不用新建，但是正常的项目为了安全不应该使用 root 账户。
     我的习惯：创建一个名为 dev 的账户
@@ -80,16 +95,17 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     > 十分推荐上面这个 IDEA 的教程 
 6. 卸载旧版本/重装新版本 [这个](https://zhuanlan.zhihu.com/p/68190605) 
     > 按照里面有的就操作，没有的就不管（我是成功了，但不一定都可以 :no_mouth: ）
+7. 添加用户失败，报错 `ERROR 1396 (HY000): Operation CREATE USER failed for 'XXXX'@'XXXX'`
+    
+    原因：数据库删除用户后需要刷新权限才可以实现删除（或重启服务。`drop user 'xxxx'@’xxxx’;` + `flush privileges;`，再创建新用户 
+    > `flush privileges` 本质上是将当前 user 和 privilege 表中的用户信息/权限设置从 MySql 库（MySQL数据库的内置库）中提取到内存里
 
 #### IDEA相关
 主要参考：
 > [1](https://github.com/judasn/IntelliJ-IDEA-Tutorial)
 >
 > [2](https://www.cnblogs.com/jajian/category/1280011.html)
-1. ~~单 IDEA 窗口需要显示多个项目的原因（仅个人认为，暂时没找到很好的办法解决）~~ 请不要有这种想法，请使用更好的方法
-    - 多个 Project 之间不共享数据库连接这些，每个项目都配置一次麻烦
-    - 每次切换多个 IDEA 窗口比较麻烦，单窗口的话可以在标签之间切换
-2. IDEA 安装插件的实际意义 **不是** 单纯安装对应的软件，常用的 Tomcat 和 Git 也没有，但 Maven 却有
+2. IDEA 安装插件的实际意义 **不是** 单纯安装对应的软件，常用的 Tomcat 和 Git 没有，但 Maven 却有
 
     由于旗舰版的 IDEA 安装时默认勾选了 Maven，所以在安装的时候就已经把 Maven 装上了，
     想要在 Windows 的终端中执行 mvn 命令的话只需要设置 PATH 即可，无需手动安装 Maven，
@@ -137,16 +153,20 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     - 编辑器软换行：在编辑器中点击鼠标右键选择 `Soft-Wrap`
     - 打开 IDEA 时可选择打开的项目而不是打开最近的项目：取消勾选 `File->Settings->System Settings->Startup/Shutdowm` 里面的项目
     - 生成 serialVersionUID：`Settings->Editor->Inspections->勾选 Serializable class without serialVersionUID` （作用：在实现 Serializable 接口的类没有添加 serialVersionUID 时警告，这时可以利用 Alt+Enter 智能填充来添加 serialVersionUID ）
+        > 思路：设置没有包含 serialVersionUID 的为警告，再使用智能填充完成
     - 快速定位当前文件所在项目结构中的位置：`Alt + F1 + 1`
 9. 优秀插件推荐
     [参考](https://github.com/judasn/IntelliJ-IDEA-Tutorial/blob/master/plugins-settings.md)
 10. Java 热部署
     
     可使用 JRebel 插件（付费），具体参考 [这里](https://github.com/judasn/IntelliJ-IDEA-Tutorial/blob/master/jrebel-setup.md)
+11. 多个 Project 共享数据库连接
     
-     
-
-      
+    使用 Database->Data Source Properties->Project Data Sources->选定一个数据库连接再鼠标右键选择 Make Global）
+12. 使用 IDEA 的 Database 工具生成了新的 Schemas 但刷新不出来
+    
+    `鼠标右键点击数据库连接名->Database Tools->Manage Shown Schemas` 查看是否有新的 Schemas
+    
 #### SpringBoot相关
 1. 三种创建方式
     1. 在 IDEA 中创建一个 Spring Initializr 项目（必须联网）
@@ -190,17 +210,17 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
         **那如何使一个 Maven 项目变成一个 SpringBoot 项目？**
         1. 在文件 pom.xml 中添加 SpringBoot 的引用，至少需要以下三个
             ```xml
-           <!-- 添加 java 版本属性 -->
-           <properties>
+            <!-- 添加 java 版本属性 -->
+            <properties>
                <java.version>1.8</java.version>
-           </properties>
+            </properties>
            
-           <!-- 添加 SpringBoot 的父项目 -->
-           <parent>
+            <!-- 添加 SpringBoot 的父项目 -->
+            <parent>
                <groupId>org.springframework.boot</groupId>
                <artifactId>spring-boot-starter-parent</artifactId>
                <version>2.2.0.RELEASE</version>
-           </parent>
+            </parent>
        
            <!-- 手动添加依赖 -->
            <dependencies>
@@ -246,7 +266,7 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
         > 可以理解为，最后一步并不能将文件移动到一个新的文件夹，只是复制了一份 .idea 这个文件夹到新的文件夹 
 2. 如果使用 Maven 打包为 jar 包，再使用 `java -jar xxx.jar` 运行时，需要注意可能不能正常关闭项目
 
-    windows 使用 `netstat -aon|findstr "8080` 来查看监听端口号为8080的进程，就可以使用 `tskill` 来强制关闭进程或使用任务管理器关闭
+    windows 使用 `netstat -aon|findstr "8080` 来查看监听端口号8080的进程，就可以根据 PID 使用 `tskill` 来强制关闭或使用任务管理器关闭
 3. 启动方式
     1. 如果使用 Spring Initializr 创建的项目默认使用 Spring Boot 内置的 Tomcat 来运行，不需要设置 Tomcat
     2. 如果想使用非 Spring Boot 内置的 Tomcat 来运行的话，需要完成以下步骤（外部 Tomcat 的版本为 9.0 可成功运行，其他版本不行，原因不详）
@@ -261,7 +281,7 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
 #### Maven 相关
 1. Maven 的意义
 
-    项目依赖管理（将多个项目用到的 jar 包统一在本地仓库，不需要重复复制、粘贴、保存） + 提供项目结构、目录结构的标准（利于项目的传播与学习）
+    项目依赖管理（将多个项目用到的 jar 包统一在本地仓库，不需要重复复制/粘贴、保存） + 提供项目结构、目录结构的标准（利于项目的分析与开源）
 2. Maven 的配置
 
     配置文件所在地址： `Maven安装目录\maven<版本号>\conf\settings.xml` **or** `C:\Users\<用户名>\.m2\settings.xml`
@@ -276,7 +296,7 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
 #### 其他
 1. 绿色安装版软件
     
-    使用非 exe 程序安装的软件，多数只要 解压+设置环境变量 就可以正常使用，例如：jdk, Tomcat, Maven
+    使用非 exe 程序安装的软件，多数只要 **解压+设置环境变量** 就可以正常使用，例如：jdk, Tomcat, Maven
     
 2. 如何配置环境变量（用命令行实现）？
     - Linux: `setenv('JAVA_HOME','C:\Java\jdk<版本>');` + `setenv('PATH', [getenv('PATH') ';目录']);` （当然，目录可以是 环境变量名，例如 `%JAVA_HOME%\bin`）

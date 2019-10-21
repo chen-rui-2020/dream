@@ -7,6 +7,7 @@ Fighting!
 3. 多跑几个项目，总结步骤，细化每一个步骤。
 4. 扎实基础，学习Spring Boot 
 5. 学习Maven 多模块项目。
+6. https://accp.site/categories/%E7%BC%96%E7%A8%8B/Java/SpringBoot/学习Spring Boot基础
 ---
 
 ## 进度
@@ -73,3 +74,57 @@ IDEA跑项目我的步骤：
 > 访问 Controller 了解 Debug
 > 静态资源映射，比如做图片上传等，如没有映射好可能遇到404
 - [ ] MyBatis插件的使用
+
+---
+#### 10.21
+- [x] 添加Banner文件
+- [x] 创建Controller类，不同的注解方式
+
+   ````
+   1. @RestController:处理http请求：等同于@Controller +  @ResponseBody
+   2. @RequestMapping:value = “访问的路由”method = 请求方法
+   3. @GetMapping:以GET方式请求 相当于对@RequestMapping配置的缩写
+   ````
+- [x] URL的其他形式
+     1.  窄化请求：类和方法都有value (http://localhost:8080/user/hello)
+     ![](https://github.com/Yths0814/picture/blob/master/images/url.png)
+     2. 配置多url对1映射 http://localhost:8080/hello或http://localhost:8080/hi
+     
+- [x] 其他项目创建方式
+    1. > SPRING INITIALIZR：通过IDEA或者STS工具创建INITIALIZR项目
+    
+    2. >创建Maven项目手动添加依赖
+        ````
+        <parent>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-parent</artifactId>
+            <version>1.5.9.RELEASE</version>
+        </parent>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+            </dependency>
+        </dependencies>
+        ````
+     3. >通过https://start.spring.io/生成定制项目
+ 
+- [x] 运行方式
+    * 在IDEA中直接运行
+    * 发布jar包运行
+        ````
+        <!-- 这个插件，可以将应用打包成一个可执行的jar包；-->
+           <build>
+               <plugins>
+                   <plugin>
+                       <groupId>org.springframework.boot</groupId>
+                       <artifactId>spring-boot-maven-plugin</artifactId>
+                   </plugin>
+               </plugins>
+           </build>
+        ````
+        导入这个maven插件，利用idea打包，生成的jar包，可以使用java -jar xxx.jar启动
+        
+        Spring Boot 使用嵌入式的Tomcat无需再配置Tomcat
+
+      

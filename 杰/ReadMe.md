@@ -1,4 +1,4 @@
-# 2019.10.19
+# 2019.10.21
 # Learning_plan  
 
 ## 一、学习Spring-boot框架  
@@ -52,3 +52,9 @@
   - [x] 解决了前一天遗留下来的无法运行test类的问题，原来spring-boot的自动导包技术有时会失灵，会通过maven导入一些不需要的jar包，而真正需要用到的包却不会自动下载。我的解决办法比较笨：删除项目中所有依赖的包，再通过Maven Reimport 
   - [x] 遇到一个无法注入bean的问题（明明代码是没有问题的呀.....）折腾许久终于明白Spring-boot自动扫描包成功与否与包路径的位置密切相关（注意存放自定义类的bean包与主程序类要在同一文件夹）具体看[关于SpringBoot bean无法注入的问题（与文件包位置有关）改变自动扫描的包](https://blog.csdn.net/u014695188/article/details/52263903)
   - [x] 了解到了更多配置文件的用法，尝试与理解Springboot自动配置文件的原理（懵懵懂懂的.....）
+- 2019.10.20
+  - [x] 了解了spring-boot的日志的大致功能(spirng-boot的日志采用的是slf4j+log4j配置方式)
+  - [x] 尝试按网上教程模仿搭建一个简单的web项目，目前已了解了SpringBoot对静态资源的映射规则
+- 2019.10.21
+  - [x] 继续学习搭建web项目，目前已尝试使用了spring-boot的模板引擎thymeleaf，简单了解了thymeleaf的语法（感觉语法规则比较多，估计要花较多时间来熟悉）
+  - [x] 简单学习了在spring-boot中使用Spring MVC的方法，但由于对Spring MVC还缺乏认识，目前进展不大

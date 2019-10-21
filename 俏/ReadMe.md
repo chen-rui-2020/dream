@@ -2,9 +2,10 @@
 
 ### 每日更新，任重道远。
 ###### 最新进度（update 10.21）
-- [ ] 尝试运行ssm_demo_master的demo模块，没有成功。（10.20）  
-- [x] 配置tomcat的详细部署Artifacts，之前运行maven模块的tomcat没有用到，但tomcat的Deployment没有Artifacts的时候是不能run的，这时我们可以从错误提示中打开Artifacts的设置或者是file-projocet struccture-Aritifacts，然后创建一个输出依赖。（10.21）  
-
+- [x] 配置tomcat的详细部署Artifacts，tomcat的Deployment没有Artifacts的时候是不能run的，这时我们可以从错误提示中打开Artifacts的设置或者是file-projocet struccture-Aritifacts，然后创建一个输出依赖。（10.21）  
+![](./pic/artifacts.png)  
+- [x] 对maven项目的运行过程更了解了，双击使用右侧的maven的package生成一个项目的war包，然后Artifacts的Output Layout加上war包后，tomcat上面的Deployment就可以用了。
+![](./pic/depolyment.png)  
 ## 10月学习计划
 ### 1.spring-boot
 | 阶段 | 项目计划 |
@@ -22,6 +23,7 @@
 > 运行成功<https://github.com/ZHENFENG13/ssm-demo>的ssm_maven项目（10.18）  
  ![](./pic/ssm_demo首页.png)
 >- 注意事项：重启后一定记得打开MySQL服务  
+>- [ ] 尝试运行ssm_demo_master的demo模块，没有成功。（10.20）  
 ##### 进度跟踪3.1
 > 1.创建并运行一个spring-boot的“hello world”简单项目（10.19）  
 ![](./pic/helloworld.png)  

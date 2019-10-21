@@ -87,7 +87,7 @@ IDEA跑项目我的步骤：
    ````
 - [x] URL的其他形式
      1.  窄化请求：类和方法都有value (http://localhost:8080/user/hello)
-     ![](https://github.com/Yths0814/picture/blob/master/images/url.png)
+       ![](https://github.com/Yths0814/picture/blob/master/images/url.png)
      2. 配置多url对1映射 http://localhost:8080/hello或http://localhost:8080/hi
      
 - [x] 其他项目创建方式
@@ -126,5 +126,6 @@ IDEA跑项目我的步骤：
         导入这个maven插件，利用idea打包，生成的jar包，可以使用java -jar xxx.jar启动
         
         Spring Boot 使用嵌入式的Tomcat无需再配置Tomcat
+- [ ] Basic-Multi-Module-SSM项目运行成功，简单了解多模块项目构建方式。
 
       

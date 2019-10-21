@@ -1,16 +1,9 @@
 # Spring-boot学习计划
 
 ### 每日更新，任重道远。
-###### 最新进度（update 10.19）
-- [x] 创建并运行一个spring-boot的“hello world”简单项目（10.19）
- ![](./pic/helloworld.png)  
- - 源代码如下  
-  ![](./pic/源码.png)
-  - 收获：  
-  1.复习了java SE的注解；  
-  2.了解了idea新建项目的操作，事实上idea基本是全自动的，一直next到所有文件夹都生成好给你，这与eclipse有较大的区别，我们只需要在已有的结构上添加即可；  
-  3.进一步了解了spring-boot的结构，例如发现maven整合了jar包；  
-  4.结合昨天运行的demo界面，有一点点灵感可以通过不断添加开发模块将helloworld转变成为多功能的界面(尚未验证)。
+###### 最新进度（update 10.21）
+- [ ] 尝试运行ssm_demo_master的demo模块，没有成功。（10.20）  
+- [x] 配置tomcat的详细部署Artifacts，之前运行maven模块的tomcat没有用到，但tomcat的Deployment没有Artifacts的时候是不能run的，这时我们可以从错误提示中打开Artifacts的设置或者是file-projocet struccture-Aritifacts，然后创建一个输出依赖。（10.21）  
 
 ## 10月学习计划
 ### 1.spring-boot

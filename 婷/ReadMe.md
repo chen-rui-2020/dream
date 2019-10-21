@@ -7,7 +7,7 @@ Fighting!
 3. 多跑几个项目，总结步骤，细化每一个步骤。
 4. 扎实基础，学习Spring Boot 
 5. 学习Maven 多模块项目。
-6. https://accp.site/categories/%E7%BC%96%E7%A8%8B/Java/SpringBoot/学习Spring Boot基础
+6. https://accp.site/categories/%E7%BC%96%E7%A8%8B/Java/SpringBoot/ 学习Spring Boot基础
 ---
 
 ## 进度
@@ -88,7 +88,7 @@ IDEA跑项目我的步骤：
 - [x] URL的其他形式
      1.  窄化请求：类和方法都有value (http://localhost:8080/user/hello)
        ![](https://github.com/Yths0814/picture/blob/master/images/url.png)
-     2. 配置多url对1映射 http://localhost:8080/hello或http://localhost:8080/hi
+     2. 配置多url对1映射 http://localhost:8080/hello 或 http://localhost:8080/hi
      
 - [x] 其他项目创建方式
     1. > SPRING INITIALIZR：通过IDEA或者STS工具创建INITIALIZR项目
@@ -107,7 +107,7 @@ IDEA跑项目我的步骤：
             </dependency>
         </dependencies>
         ````
-     3. >通过https://start.spring.io/生成定制项目
+     3. >通过https://start.spring.io/  生成定制项目
  
 - [x] 运行方式
     * 在IDEA中直接运行

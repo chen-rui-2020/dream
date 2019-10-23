@@ -7,7 +7,7 @@ Fighting!
 3. 多跑几个项目，总结步骤，细化每一个步骤。
 4. 扎实基础，学习Spring Boot 
 5. 学习Maven 多模块项目。
-6. https://accp.site/categories/%E7%BC%96%E7%A8%8B/Java/SpringBoot/学习Spring Boot基础
+6. https://accp.site/categories/%E7%BC%96%E7%A8%8B/Java/SpringBoot/ 学习Spring Boot基础
 ---
 
 ## 进度
@@ -88,7 +88,7 @@ IDEA跑项目我的步骤：
 - [x] URL的其他形式
      1.  窄化请求：类和方法都有value (http://localhost:8080/user/hello)
        ![](https://github.com/Yths0814/picture/blob/master/images/url.png)
-     2. 配置多url对1映射 http://localhost:8080/hello或http://localhost:8080/hi
+     2. 配置多url对1映射 http://localhost:8080/hello 或 http://localhost:8080/hi
      
 - [x] 其他项目创建方式
     1. > SPRING INITIALIZR：通过IDEA或者STS工具创建INITIALIZR项目
@@ -107,7 +107,7 @@ IDEA跑项目我的步骤：
             </dependency>
         </dependencies>
         ````
-     3. >通过https://start.spring.io/生成定制项目
+     3. >通过https://start.spring.io/  生成定制项目
  
 - [x] 运行方式
     * 在IDEA中直接运行
@@ -127,5 +127,37 @@ IDEA跑项目我的步骤：
         
         Spring Boot 使用嵌入式的Tomcat无需再配置Tomcat
 - [ ] Basic-Multi-Module-SSM项目运行成功，简单了解多模块项目构建方式。
+---
+#### 10.22
+- [x] 参数传递
+    ````
+    1、get方式Url传参
+    @PathVariable  http://localhost:8080/hello/Yt
+    @RequestParam  http://localhost:8080/hello?name=Yt
+    @RequestParam+默认参数 @RequestParam(value = "name",defaultValue = "admin")
+    @RequestParam(value = "name",required=false)非必须参数
+
+    ````
+    
+    ````
+    2、post方式传递数据
+    ````
+ ---
+#### 10.23
+- [x] Getter and Setter方法太方便了，快捷键alt+insert
+- [x] 学习配置文件：application.properties 和 application.yml
+- [x] YMAL语法：基本语法和值的写法
+- [x] 配置文件值注入
+   1.  配置文件处理器
+   
+         ![](https://github.com/Yths0814/picture/blob/master/images/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%BB%91%E5%AE%9A.png)
+    
+   2.  @Value获取值和@ConfigurationPropeties获取值比较
+    ````
+    注：properties配置文件在IDEA中默认utf-8可能会乱码
+    ````
+
+
+    
 
       

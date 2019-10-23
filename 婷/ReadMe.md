@@ -149,7 +149,8 @@ IDEA跑项目我的步骤：
 - [x] YMAL语法：基本语法和值的写法
 - [x] 配置文件值注入
    1.  配置文件处理器
-    ![](https://github.com/Yths0814/picture/blob/master/images/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%BB%91%E5%AE%9A.png)
+   
+         ![](https://github.com/Yths0814/picture/blob/master/images/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%BB%91%E5%AE%9A.png)
     
    2.  @Value获取值和@ConfigurationPropeties获取值比较
     ````

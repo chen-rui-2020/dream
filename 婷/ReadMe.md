@@ -132,8 +132,29 @@ IDEA跑项目我的步骤：
 - [x] 参数传递
     ````
     1、get方式Url传参
+    @PathVariable  http://localhost:8080/hello/Yt
+    @RequestParam  http://localhost:8080/hello?name=Yt
+    @RequestParam+默认参数 @RequestParam(value = "name",defaultValue = "admin")
+    @RequestParam(value = "name",required=false)非必须参数
+
+    ````
+    
+    ````
     2、post方式传递数据
     ````
+#### 10.23
+- [x] Getter and Setter方法太方便了，快捷键alt+insert
+- [x] 学习配置文件：application.properties 和 application.yml
+- [x] YMAL语法：基本语法和值的写法
+- [x] 配置文件值注入
+    配置文件处理器![](https://github.com/Yths0814/picture/blob/master/images/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%BB%91%E5%AE%9A.png)
+    
+    @Value获取值和@ConfigurationPropeties获取值比较
+    ````
+    注：properties配置文件在IDEA中默认utf-8可能会乱码
+    ````
+
+
     
 
       

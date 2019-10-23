@@ -3,7 +3,7 @@
 ### 每日更新，任重道远。
 ###### 最新进度（update 10.23）
 >  Spring Boot(一)：入门篇 #笔记   
- ![](./pic/111.jpg)  
+ ![](./pic/111.png)  
 > Idea的全局搜索失灵，解决办法：解决其他快捷键冲突！
 ## 10月学习计划
 ### 1.spring-boot
@@ -25,7 +25,7 @@
 >- [ ] 尝试运行ssm_demo_master的demo模块，没有成功。（10.20）  
 ##### 进度跟踪2.1（以 [纯洁的微笑](http://www.ityouknow.com/spring-boot.html) 的 Spring Boot 教程为主线了解 Spring Boot）
 > 2.1.1 Spring Boot(一)：入门篇  #笔记（10.23）  
- ![](./pic/111.jpg)
+ ![](./pic/111.png)
 ##### 进度跟踪3.1
 > 1.创建并运行一个spring-boot的“hello world”简单项目（10.19）  
 ![](./pic/helloworld.png)  

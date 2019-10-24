@@ -156,8 +156,23 @@ IDEA跑项目我的步骤：
     ````
     注：properties配置文件在IDEA中默认utf-8可能会乱码
     ````
-
-
-    
-
+---
+#### 10.24
+- [x] @PropertiesSource & @ImportResource
+    ````
+    @PropertiesSource 加载指定的配置文件
+    @ImportResource 导入Spring的配置文件，让配置文件里的内容生效
+    ````
+- [x] Spring Boot 推荐给容器中添加组件的方式：推荐使用全注解的方式
+    > 配置类中用@Bean 给容器添加组件
+- [x] 配置文件占位符
+- [x] Profile文件
+    ````
+    Profile是Spring对不同环境提供的不同配置功能的支持，可以通过激活、指定参数等方式快速切换环境。
+    ````
+- [x] 激活指定profile
+    1. 在application.properties中指定spring.profiles.active=dev
+    2. 在application.yml中用多文档块方式
+    3. 命令行方式
+    4. 虚拟机参数
       

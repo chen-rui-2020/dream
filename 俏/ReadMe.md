@@ -1,6 +1,10 @@
 # Spring-boot学习计划
 
 ### 每日更新，任重道远。
+###### 最新进度（update 10.23）
+>  Spring Boot(一)：入门篇 #笔记   
+ ![](./pic/111.png)  
+> Idea的全局搜索失灵，解决办法：解决其他快捷键冲突！
 ## 10月学习计划
 ### 1.spring-boot
 | 阶段 | 项目计划 |
@@ -19,6 +23,9 @@
  ![](./pic/ssm_demo首页.png)
 >- 注意事项：重启后一定记得打开MySQL服务  
 >- [ ] 尝试运行ssm_demo_master的demo模块，没有成功。（10.20）  
+##### 进度跟踪2.1（以 [纯洁的微笑](http://www.ityouknow.com/spring-boot.html) 的 Spring Boot 教程为主线了解 Spring Boot）
+> 2.1.1 Spring Boot(一)：入门篇  #笔记（10.23）  
+ ![](./pic/111.png)
 ##### 进度跟踪3.1
 > 1.创建并运行一个spring-boot的“hello world”简单项目（10.19）  
 ![](./pic/helloworld.png)  
@@ -53,6 +60,7 @@
 ##### 进度跟踪2.2
 > 2.2.1了解markdown插件并学习了markdown语法。(10.12)  
 > 2.2.2了解git插件，并掌握从idea上传文件到github上面的方法。（10.13）  
+> 2.2.3 Idea的全局搜索失灵，解决办法：解决其他快捷键冲突！（10.23）
 ##### 进度跟踪2.3
 > 2.3.1通过导入项目摸索中（10.14）  
 > 2.3.2 了解idea的界面  (10.17)

@@ -167,6 +167,31 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     
     `鼠标右键点击数据库连接名->Database Tools->Manage Shown Schemas` 查看是否有新的 Schemas
     
+#### Spring 相关
+1. Spring 的体系结构意味着什么？
+    > 回想一个问题？原来我们使用 Eclipse 创建 Spring 项目时会新建了一个 lib 文件夹用以存放 “拷贝的”  的 jar 包，可是为什么我们需要这 **6个** jar 包呢？（使用 AOP 之后还增加了几个包）
+     ![拷贝的 jar 包](./img/importJar.png)
+    
+    - 答案：要用 Spring 提供的功能需要至少导入核心包，即这六个包
+    
+    - 解释：
+    
+    先节选两张 [W3Cschool](https://www.w3cschool.cn/wkspring/dcu91icn.html) 关于 Spring 体系结构的图
+    
+    ![Spring 体系结构](https://atts.w3cschool.cn/attachments/image/wk/wkspring/arch1.png)
+    
+    从体系结构图可以看出核心容器（Core Container）包含了四个模块，分别对应了4个 jar 包（spring-beans, spring-core, spring-context, spring-expression）
+    
+    ![Spring Core 依赖](https://atts.w3cschool.cn/attachments/image/20181023/1540290875453691.png)
+    
+    从 spring-core 的依赖可以看出还必须带上一个 commons-logging 的包。另，特殊一点的是 spring-context-support 包，这里 [W3Cschool](https://www.w3cschool.cn/wkspring/dcu91icn.html) 的解释是 **该包提供了对第三方库集成到 Spring 上下文的支持** 
+    
+    - 总结：Spring 的体系结构告诉我们要使用什么功能需要导入什么包，整个 Spring 框架的包位于 [Spring-Github](https://github.com/spring-projects/spring-framework/tree/master)
+    - 延申：
+        1. 在使用 Spring Initializr 创建一个 “Hello, World!” 的 Web 项目时，在 pom.xml 的 <dependencies> 节点中没有明显看到之前导入的 Spring 6个包，但可看到 "spring-boot-starter-web" 这样的依赖，实际上多次追踪就可以发现 spring-boot 中就包含了 spring-core 等 spring 的核心模块，所以说 SpringBoot 的其中之一作用就是简化配置
+            > 如何追踪？按住 Ctrl 键同时鼠标左键点击 `<artifactId>` 的内容，会跳转到另一个 xxx.pom 文件，找到该文件的 `<dependencies>` 节点再用同样的方法继续追踪下去
+        2. Maven 的作用避免了我们多次复制/粘贴，保存 jar 包
+    
 #### SpringBoot相关
 1. 三种创建方式
     1. 在 IDEA 中创建一个 Spring Initializr 项目（必须联网）
@@ -292,6 +317,11 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     > `<localRepository>/path/to/local/repo</localRepository>`
     > 
     > 默认为 `${user.home}/.m2/repository` 建议修改为其他路径，有建议说放置在 Maven 的安装目录下
+3. pom.xml 文件的基本结构
+    - 项目的基本信息 <groupId>, <artifactId> 等
+    - 项目变量 <properties>
+    - 项目依赖 <dependencies>
+    - 编译设置 <build> (内含 <plugins>)
 
 #### 其他
 1. 绿色安装版软件

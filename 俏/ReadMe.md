@@ -1,10 +1,19 @@
 # Spring-boot学习计划
 
 ### 每日更新，任重道远。
-###### 最新进度（update 10.23）
->  Spring Boot(一)：入门篇 #笔记   
- ![](./pic/111.png)  
-> Idea的全局搜索失灵，解决办法：解决其他快捷键冲突！
+###### 最新进度（update 10.24）
+>  Spring Boot(二)：Web 综合开发 #笔记1   
+>  jpa数据操作：利用 Hibernate 生成各种自动化的 sql  
+>步骤：
+>> 1.在pom.xml中添加相关jar文件
+>> 2.在resource的application.properties添加配置文件 如图：
+>> ![](./pic/2.png)
+>> 其中：create： 每次加载 hibernate 时都会删除上一次的生成的表，然后根据你的 model 类再重新来生成新表，哪怕两次没有任何改变也要这样执行，这就是导致数据库表数据丢失的一个重要原因。
+      create-drop ：每次加载 hibernate 时根据 model 类生成表，但是 sessionFactory 一关闭,表就自动删除。
+      update：最常用的属性，第一次加载 hibernate 时根据 model 类会自动建立起表的结构（前提是先建立好数据库），以后加载 hibernate 时根据 model 类自动更新表结构，即使表结构改变了但表中的行仍然存在不会删除以前的行。要注意的是当部署到服务器后，表结构是不会被马上建立起来的，是要等 应用第一次运行起来后才会。
+      validate ：每次加载 hibernate 时，验证创建数据库表结构，只会和数据库中的表进行比较，不会创建新表，但是会插入新值。  
+>> 3.添加实体类和 Dao （dao 只要继承 JpaRepository 类就可以，不用写方法。可以根据方法名来自动的生成 SQL，比如findByUserName 会自动生成一个以 userName 为参数的查询方法，比如 findAlll 自动会查询表里面的所有数据，比如自动分页等等。）  
+>> 4.测试（未成功，解决ing)
 ## 10月学习计划
 ### 1.spring-boot
 | 阶段 | 项目计划 |

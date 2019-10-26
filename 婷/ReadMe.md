@@ -175,4 +175,25 @@ IDEA跑项目我的步骤：
     2. 在application.yml中用多文档块方式
     3. 命令行方式
     4. 虚拟机参数
+---
+#### 10.26
+- [x] ![](https://github.com/Yths0814/picture/blob/master/images/返回json数据.png)
+       
+   返回json数据
+   ````
+     Rather than relying on a view technology to perform server-side rendering of the 
+     greeting data to HTML,this RESTful web service controller simply populates and 
+     returns a Greeting object.The object data will be written directly to the HTTP 
+     response as JSON.
+    ````
+- [x] IntelliJ Idea SpringBoot 数据库增删改查实例.
+
+    ![](https://github.com/Yths0814/picture/blob/master/images/增删改查.png)
+    
+    实现了查找数据表并以json格式返回数据
+    
+    1. 创建与数据表对应的实体类
+    2. 运行项目后，查看数据库，会自动创建表 ，接下来就可以进行表的增删改查了
+    3. 创建控制器
+    4. 创建一个接口，位于dao包下,调用该接口继承自JpaRepository的方法，来实现和数据库交互
       

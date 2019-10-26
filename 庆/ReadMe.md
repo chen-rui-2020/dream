@@ -149,10 +149,10 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     - Live Templates
     - Postfix Completion
 8. 其他 [自定义设置](https://github.com/judasn/IntelliJ-IDEA-Tutorial/blob/master/settings-recommend-introduce.md)
-    - 鼠标滚轮放大/缩小编辑器字体： 勾选 `Settings->General->Editor->Mouse->Change Font Size(Zoom) with Ctrl+Mouse Wheel`
+    - 鼠标滚轮放大/缩小编辑器字体： 勾选 `菜单栏->Settings->Editor->General->Mouse->Change Font Size(Zoom) with Ctrl+Mouse Wheel`
     - 编辑器软换行：在编辑器中点击鼠标右键选择 `Soft-Wrap`
-    - 打开 IDEA 时可选择打开的项目而不是打开最近的项目：取消勾选 `File->Settings->System Settings->Startup/Shutdowm` 里面的项目
-    - 生成 serialVersionUID：`Settings->Editor->Inspections->勾选 Serializable class without serialVersionUID` （作用：在实现 Serializable 接口的类没有添加 serialVersionUID 时警告，这时可以利用 Alt+Enter 智能填充来添加 serialVersionUID ）
+    - 打开 IDEA 时可选择打开的项目而不是打开最近的项目：取消勾选`菜单栏->Settings->Appearance&Behavior->System Settings->Startup/Shutdowm` 里面的项目
+    - 生成 serialVersionUID：`菜单栏->Settings->Editor->Inspections->勾选 Serializable class without serialVersionUID` （作用：在实现 Serializable 接口的类没有添加 serialVersionUID 时警告，这时可以利用 Alt+Enter 智能填充来添加 serialVersionUID ）
         > 思路：设置没有包含 serialVersionUID 的为警告，再使用智能填充完成
     - 快速定位当前文件所在项目结构中的位置：`Alt + F1 + 1`
 9. 优秀插件推荐
@@ -193,7 +193,7 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
         2. Maven 的作用避免了我们多次复制/粘贴，保存 jar 包
     
 #### SpringBoot相关
-1. 三种创建方式
+1. 三种创建方式，[来源：稀客大大博客](https://zed058.cn/code/dev/springboot-02%E5%86%8D%E4%BD%93%E9%AA%8C.html#_2%E3%80%81%E5%85%B6%E4%BB%96%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F)
     1. 在 IDEA 中创建一个 Spring Initializr 项目（必须联网）
         
         > 实际上就是第三种方法的一种便捷方式，在创建项目时可看到 `Choose Initializr Service URL` 指向的就是 [start.spring.io](https://start.spring.io/)
@@ -233,8 +233,11 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
         - pom.xml 中缺少了很多配置
         
         **那如何使一个 Maven 项目变成一个 SpringBoot 项目？**
-        1. 在文件 pom.xml 中添加 SpringBoot 的引用，至少需要以下三个
+        1. 在文件 pom.xml 中添加 SpringBoot 的引用，至少需要以下四个
             ```xml
+            <!-- 指定打包格式 -->
+            <packaging>war</packaging>
+
             <!-- 添加 java 版本属性 -->
             <properties>
                <java.version>1.8</java.version>
@@ -298,6 +301,12 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
         [参考](https://blog.csdn.net/fanshukui/article/details/80258793)（1. 修改启动类；2. 在 pom.xml 中去掉内嵌 Tomcat 的依赖和指明打包类型）
     
 #### Tomcat 相关
+1. Tomcat 的官方安装说明
+
+    版本说明：Core 的 zip 版本
+    
+    解压后在 README.md 中可以看到安装教程在 RUNNING.txt 文件中（与安装 JDK1.8 差不哦）
+
 1. Tomcat 启动乱码
 
     修改 `Tomcat安装目录/conf/logging.properties` 下的  `java.util.logging.ConsoleHandler.encoding = utf-8` 改为 GBK 即可
@@ -329,8 +338,18 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     使用非 exe 程序安装的软件，多数只要 **解压+设置环境变量** 就可以正常使用，例如：jdk, Tomcat, Maven
     
 2. 如何配置环境变量（用命令行实现）？
-    - Linux: `setenv('JAVA_HOME','C:\Java\jdk<版本>');` + `setenv('PATH', [getenv('PATH') ';目录']);` （当然，目录可以是 环境变量名，例如 `%JAVA_HOME%\bin`）
-    - Windows: `setx JAVA_HOME "C:\Java\jdk<版本>" /m` + `setx PATH "%PATH%;目录" /m` 
-        > 其中，`/m` 指明为设置系统变量而不是本地(用户)环境变量，加双引号是避免 Windows 目录中空格的影响。[参考](https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/setx)。另，设置后在当前终端使用 `echo %JAVA_HOME%` 会显示设置前的值，需要打开一个新的终端才可查看到
+
+    - Linux: `setenv('JAVA_HOME','C:\Java\jdk<版本>');` + `setenv('PATH', [getenv('PATH') ';目录\bin']);` （当然，目录可以是 环境变量名，例如 `%JAVA_HOME%\bin`）
+    - Windows: `setx JAVA_HOME "C:\Java\jdk<版本>" /M` + `setx PATH "%PATH%;目录\bin" /M` 
+
+        > 其中，`/M` 指明为设置系统变量而不是本地(用户)环境变量，加双引号是避免 Windows 目录中空格的影响。[参考](https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/setx)。另，设置后在当前终端使用 `echo %JAVA_HOME%` 会显示设置前的值，需要打开一个新的终端才可查看到
+        >
+        > 可能会出现权限和需要重启系统的问题，如果实在不行请使用 `鼠标右键“我的电脑”->属性->高级系统设置->环境变量` 来添加
+3. JDK 的安装介绍
+
+    如果安装的版本为 1.8 的话，可以只设置 JAVA_HOME 和 PATH 这两个环境变量，具体的参考 [官网](https://docs.oracle.com/javase/8/docs/technotes/guides/install/windows_jdk_install.html#BABGDJFH)
     
-    
+    > 简单解释：JAVA_HOME 就可以理解为一个变量，可用于给其他变量引用使用，例如：`PATH=%PATH%;<new path>` 这里面的 `%PATH%` 就是引用了 PATH 这个变量；PATH 也是一个变量，系统根据这个变量系统寻找可执行文件
+4. GitHub 的 SSH Keys 设置
+
+    可参考 [官网](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)

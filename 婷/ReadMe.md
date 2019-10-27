@@ -177,9 +177,10 @@ IDEA跑项目我的步骤：
     4. 虚拟机参数
 ---
 #### 10.26
-- [x] ![](https://github.com/Yths0814/picture/blob/master/images/返回json数据.png)
+- [x] 返回json数据
+
+    ![](https://github.com/Yths0814/picture/blob/master/images/返回json数据.png)
        
-   返回json数据
    ````
      Rather than relying on a view technology to perform server-side rendering of the 
      greeting data to HTML,this RESTful web service controller simply populates and 
@@ -187,6 +188,7 @@ IDEA跑项目我的步骤：
      response as JSON.
     ````
 - [x] IntelliJ Idea SpringBoot 数据库增删改查实例.
+
     ![](https://github.com/Yths0814/picture/blob/master/images/增删改查.png)
     
     实现了查找数据表并以json格式返回数据

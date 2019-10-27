@@ -187,7 +187,6 @@ IDEA跑项目我的步骤：
      response as JSON.
     ````
 - [x] IntelliJ Idea SpringBoot 数据库增删改查实例.
-
     ![](https://github.com/Yths0814/picture/blob/master/images/增删改查.png)
     
     实现了查找数据表并以json格式返回数据
@@ -196,4 +195,10 @@ IDEA跑项目我的步骤：
     2. 运行项目后，查看数据库，会自动创建表 ，接下来就可以进行表的增删改查了
     3. 创建控制器
     4. 创建一个接口，位于dao包下,调用该接口继承自JpaRepository的方法，来实现和数据库交互
+    
+---
+#### 10.27
+- [ ] 尝试IDEA+Maven 整合SSM框架实现简单的增删改查，还没成功。
+
+    遇到的问题：创建Maven项目Unable to import maven projects
       

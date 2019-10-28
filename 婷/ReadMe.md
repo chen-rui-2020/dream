@@ -203,4 +203,16 @@ IDEA跑项目我的步骤：
 - [ ] 尝试IDEA+Maven 整合SSM框架实现简单的增删改查，还没成功。
 
     遇到的问题：创建Maven项目Unable to import maven projects
-      
+    
+---
+#### 10.28
+- [x] 成功尝试IDEA+Maven 整合SSM框架实现简单的增删改查，实现一个前端小界面，可进行增删改查      
+     
+     ![](https://github.com/Yths0814/picture/blob/master/images/数据页.png)
+     
+     ![](https://github.com/Yths0814/picture/blob/master/images/增加数据.png)
+     
+     代码不是自己敲的，是自己一点点实现的，遇到很多很多问题，都是百度解决（忧愁）。接下来就是看看这个小集成页面的具体构成和代码。
+
+- [x] 昨天遇到的Unable to import maven projects问题后来发现是因为maven版本问题。
+- [x] 记得配置tomcat里的Deployment，添加war exploded不然会找不到 localhost 的网页。

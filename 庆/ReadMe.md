@@ -313,6 +313,13 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     > 或在 Run->Edit Configurations->Tomcat server->VM Options 加上 `-Dfile.encoding=UTF-8` （未经测试）
 
 #### Maven 相关
+> [官网-5分钟入门](http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
+>
+> [官网-入门教程](http://maven.apache.org/guides/getting-started/index.html)
+>
+> [菜鸟教程-Maven]( https://www.runoob.com/maven/maven-tutorial.html) 
+>
+> [搜索包坐标的网站](https://mvnrepository.com/)
 1. Maven 的意义
 
     项目依赖管理（将多个项目用到的 jar 包统一在本地仓库，不需要重复复制/粘贴、保存） + 提供项目结构、目录结构的标准（利于项目的分析与开源）
@@ -331,13 +338,51 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     - 项目变量 <properties>
     - 项目依赖 <dependencies>
     - 编译设置 <build> (内含 <plugins>)
+4. 常用命令
+    - clean
+    - package （需要看项目类型来判断是否打包，最根本的应该就是取决于项目的 [目录结构](http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)）
+    - compile
+4. Maven 有项目模板（也叫 项目脚手架 or 工程模板） [参考](https://www.w3cschool.cn/maven/tz8e1htp.html)
+    
+    - 可以使用 `-DarchetypeArtifactId=xxxx` 来指定
+
+        例：
+        ``` xml
+        $ mvn archetype:generate
+          -DgroupId=com.companyname.xxx
+          -DartifactId=xxxxx
+          -DarchetypeArtifactId=maven-archetype-quickstart
+        ```
+
+    - 可以使用 `mvn archetype:generate` 来可视化选择需要生成的项目脚手架（据说共有 614 个，我只能查看到10个，不清楚是不是源的问题）
+5. 指定私有仓库 [参考](https://www.w3cschool.cn/maven/a4m51htj.html)
+    ``` xml
+    <dependency>
+        <groupId>xxxx</groupId>
+        <artifactId>xxxx</artifactId>
+        <scope>system</scope>
+        <version>1.0</version>
+        <systemPath>${basedir}\src\lib\xxxx.jar</systemPath>
+    </dependency>
+    ```
+
+#### MyBatis 相关
+> [HOW2J.CN](https://how2j.cn/k/mybatis/mybatis-tutorial/1087.html)
+1. MyBatis 的基本流程
+    1. 应用程序找 Mybatis 要数据 `session.xxxx('mapper.select 的 id')`
+    2. MyBatis 从数据库中找来数据
+        1. 通过 mybatis-config.xml 定位哪个数据库
+        2. 通过 id 找到对应的 xxxMapper.xml 文件（一般来说根据表来定义 xxxMapper.xml 文件）
+        3. 通过 xxxMapper.xml 文件执行对应的 SQL 语句
+        4. 根据 xxxMapper.xml 文件把返回的数据库记录封装在 resultType 中
+
 
 #### 其他
 1. 绿色安装版软件
     
     使用非 exe 程序安装的软件，多数只要 **解压+设置环境变量** 就可以正常使用，例如：jdk, Tomcat, Maven
     
-2. 如何配置环境变量（用命令行实现）？
+2. 如何配置环境变量（用命令行实现）？（依然存在问题，建议使用最后的方法设置）
 
     - Linux: `setenv('JAVA_HOME','C:\Java\jdk<版本>');` + `setenv('PATH', [getenv('PATH') ';目录\bin']);` （当然，目录可以是 环境变量名，例如 `%JAVA_HOME%\bin`）
     - Windows: `setx JAVA_HOME "C:\Java\jdk<版本>" /M` + `setx PATH "%PATH%;目录\bin" /M` 
@@ -353,3 +398,6 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
 4. GitHub 的 SSH Keys 设置
 
     可参考 [官网](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+5. XML 文件的特殊字符 `&`
+
+    `&` 是 XML 中的特殊字符之一，需要使用需用 `&amp;` 代替

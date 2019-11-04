@@ -24,8 +24,8 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
     - 根据问题回顾/补充第二阶段的知识
 
 ### 进度记录
-- 2019.10.22 第一阶段-第 7 日
-
+- 2019.11.05 第二阶段-第 1 日
+    - [x] 开始学习 Mybatis 的使用，已经尝试了 XML 配置模式和注解模式，加深了面向对象下数据库映射类的认识
 - 2019.10.21 第一阶段-第 6 日
     - [ ] 完成 [IntelliJ-IDEA-Tutorial](https://github.com/judasn/IntelliJ-IDEA-Tutorial) 的 Demo 项目
         - [x] [单模块](https://github.com/judasn/IntelliJ-IDEA-Tutorial/blob/master/maven-java-web-project-introduce.md)成功运行
@@ -368,13 +368,108 @@ Spring Boot 解决的是搭建项目快慢的问题，那项目实际是怎么�
 
 #### MyBatis 相关
 > [HOW2J.CN](https://how2j.cn/k/mybatis/mybatis-tutorial/1087.html)
-1. MyBatis 的基本流程
-    1. 应用程序找 Mybatis 要数据 `session.xxxx('mapper.select 的 id')`
-    2. MyBatis 从数据库中找来数据
-        1. 通过 mybatis-config.xml 定位哪个数据库
-        2. 通过 id 找到对应的 xxxMapper.xml 文件（一般来说根据表来定义 xxxMapper.xml 文件）
-        3. 通过 xxxMapper.xml 文件执行对应的 SQL 语句
-        4. 根据 xxxMapper.xml 文件把返回的数据库记录封装在 resultType 中
+1. MyBatis 的基本流程（XML 方式 + 注解方式）
+    1. 初始化数据库连接（读取 mybatis-config.xml 文件）
+        ``` java
+        String resource = "mybatis-config.xml";
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+        SqlSession session=sqlSessionFactory.openSession();
+        ```
+    2. XML 方式
+        1. 根据 `session.xxxx('id')` 寻找 id 所在的 xxxMapper.xml 文件
+        2. 通过 xxxMapper.xml 文件执行对应的 SQL 语句
+        3. 根据 xxxMapper.xml 文件把返回的数据库记录封装在 resultType 中（查询操作需要指定 resultType，有参数时需要指明 parameterType ）
+    3. 注解方式
+        1. 使用 `session.getMapper(表Mapper.class)` 初始化 Mapper 类
+        2. 根据调用的 mapper 接口的方法找到并执行对应的 SQL 语句
+2. xxxMapper.xml 文件的标签（动态 SQL ）
+    - if 判断执行
+        ``` xml
+        select * from product_
+        <if test="name!=null">
+            and name like concat('%',#{name},'%')
+        </if>
+        ```
+    - where 用于 where 子句的多重组合
+
+        如果任何条件都不成立，那么就在sql语句里就不会出现where关键字;如果有任何条件成立，会自动去掉多出来的 and 或者 or。
+
+        ``` xml
+        select * from product_
+        <where>
+            <if test="name!=null">
+                and name like concat('%',#{name},'%')
+            </if>
+            <if test="price!=null and price!=0">
+                and price > #{price}
+            </if>
+        </where>
+        ```
+    - set 用于 set 子句的多重组合
+
+        类似 where 标签
+
+    - trim 可用于实现 where 和 set 标签的功能
+
+        ``` xml
+        select * from product_
+        <trim prefix="WHERE" prefixOverrides="AND | OR ">
+            <if test="name!=null">
+                and name like concat('%',#{name},'%')
+            </if>
+            <if test="price!=null and price!=0">
+                and price > #{price}
+            </if>
+        </trim>
+        ```
+
+    - choose 实现 if...else 功能
+
+        没有 if...else 标签，使用 choose...otherwise 实现
+
+        ``` xml
+        SELECT * FROM product_
+        <where>
+            <choose>
+                <when test="name != null">
+                and name like concat('%',#{name},'%')
+                </when>          
+                <when test="price !=null and price != 0">
+                and price > #{price}
+                </when>              
+                <otherwise><!-- else 字段，当前面都不匹配时才选择 -->
+                and id >1
+                </otherwise>
+            </choose>
+        </where>
+        ```xml
+    - foreach 实现 foreach ，多用于 SQL 的 in 语句中
+        ``` xml
+        SELECT * FROM product_
+        WHERE ID in
+        <foreach item="item" index="index" collection="list"
+                 open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        ```
+    - bind 实现字符串连接，多用于模糊查询上
+        ``` xml
+        <select id="listProduct" resultType="Product"> -->
+            select * from   product_  where name like concat('%',#{0},'%') -->
+        </select>
+        <!-- 替代 -->
+        <select id="listProduct" resultType="Product">
+            <bind name="likename" value="'%' + name + '%'" />
+            select * from   product_  where name like #{likename}
+        </select>
+        ```
+3. 为什么会出现一对多，多对一，多对多？
+
+    数据库映射类的属性不是一一对应基本数据类型，有些是直接对应其他的数据库映射类（外键什么的），这个时候查询的时候就不是只是查询出 A 库的外键，而是直接将 A 库外键对应 B 库的数据都查出来
+
+    > 使用注解方式可以比 XML 方式更为深刻体会到这一点
 
 
 #### 其他

@@ -28,6 +28,7 @@
 | 序号 |项目名称|项目亮点|时间|
 | ------ | :------: | ------ | ------ |
 |1|[xboot-fornt](https://github.com/Exrick/xboot-front.git) |了解前后端分离的开发模式，了解JWT，了解VUE路由|2020年10月19日|
+|2|[hetu](https://github.com/LianjiaTech/hetu.git) |研究为主，了解其技术架构|2020年10月19日|
 
 #### 测试
 | 序号 |项目名称|项目亮点|时间|

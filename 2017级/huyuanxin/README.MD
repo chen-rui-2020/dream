@@ -5,10 +5,10 @@
 ### （1）第一阶段
 
 * 搭建项目环境和安装IDEA  [CSDN笔记](https://blog.csdn.net/m0_51683714/article/details/109156046)
-* 创建项目并成功运行
-* IDEA的快捷键
-* 学习更多的模块
-* Maven打包
+* 创建项目并成功运行  [CSDN笔记](https://blog.csdn.net/m0_51683714/article/details/109185265)
+* IDEA的快捷键  无CSDN笔记
+* 学习更多的模块 无CSDN笔记
+* Maven打包 无CSDN笔记
 * 项目分层和配置
 * Mybatis的配置
 
@@ -16,14 +16,13 @@
 
 * 写一个小demo，http的形式完成对数据库的增删改查
 
-* 学习前端，将demo改为界面操作
-
-* 尝试了解Spring原理
 
 ### （2）第二阶段
 
-* 写一个更多功能的项目练手
+* 学习前端，将demo改为界面操作
 
+* 写一个更多功能的项目练手
+* 尝试了解Spring原理
 * 待增加
 
 

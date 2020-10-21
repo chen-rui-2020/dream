@@ -1,6 +1,6 @@
 # Learning-Plan
 
-###### 记录每日学习内容 (updated by 10.21)
+###### 记录每日学习内容 (updated by 10.21)  ------ [CSDN笔记](https://blog.csdn.net/zhuangww05)
 
 | 任务 |                 内容                  |
 | :--: | :-----------------------------------: |

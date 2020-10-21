@@ -25,15 +25,15 @@
 
   >前提：安装webpack / webpack-cli / vue-cli
   >
-  >![](C:\Users\zhuang\Desktop\zhuang\pic\Vue脚手架初始化设置.PNG)
+  >![](pic\Vue脚手架初始化设置.PNG)
   >
   >进行初步配置之后便自动化搭建项目环境（[每个文件的详细解释](https://www.cnblogs.com/jacksplwxy/p/11495700.html)）
   >
-  >![](C:\Users\zhuang\Desktop\zhuang\pic\Vue项目文件.PNG)
+  >![](pic\Vue项目文件.PNG)
   >
   >在终端运行 npm run dev 便可以初始化项目
   >
-  >![](C:\Users\zhuang\Desktop\zhuang\pic\脚手架默认界面.PNG)
+  >![](pic\脚手架默认界面.PNG)
 
 - 成功运行了Xboot-font项目
 

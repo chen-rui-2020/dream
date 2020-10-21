@@ -84,19 +84,65 @@
   
       <img src="../../../../../../../大四/前端/命令/luhaoyi/pic/1603209074758.png" alt="1603209074758" style="zoom: 80%;" />
   
-    - [ ] Maven镜像配置
+    - [x] Maven镜像配置
   
-      - 已添加节点，配置成功否待确认
-
 - 2020/10/21
 
+  - [x] 配置MySQL环境+安装Navicat
+
+    - [x] 在IDEA上配置好环境
+
+  - [x] 安装Tomcat并在IDEA上配置好
+
   - [ ] 熟悉IDEA使用git插件
+  
+    - [x] [多人协作场景](https://blog.csdn.net/Y125348369/article/details/87907729)
+  
+  - [x] 确认springboot环境配置完毕
+  
+  - [x] 创建一个HelloSpringboot项目
+  
+    <img src="pic/1603298907466.png" alt="1603298907466" style="zoom:67%;" />
+  
+    - 常见报错
+      - 提示：'settings.xml' has syntax errors -> settings-maven-修改Usersettingsfile为正确的settings.xml路径
+      - 提示“不支持发行版本 5（或其他版本）” -> 统一这几个地方的 Java版本 
+        -  File -> Project Structure
+        -  File -> settings-> Build,Execution,Deployment -> Compiler -> Java Compiler
+        -  File -> project Structure -> Modules
+  
+  - [x] SSM入门
+  
+    >  无论学习什么技术，学习之前都要知道这项技术是什么，为什么要学，学习有什么好处
+  
+    > - SSM：Spring+SpringMVC+Mybatis 
+    >
+    >   > - Mybatis：数据访问层框架，进行Java连接数据库
+    >   >
+    >   >   > - ORM框架(Object_Relative DataBase_Mapping)
+    >   >   >   - 在Java对象和关系数据库之间建立某种映射，实现直接存取java对象
+    >   >   >   - 都是在JDBC上封装了一层
+    >   >   >
+    >   >   > - JDBC：执行SQL语言的Java API
+    >   >
+    >   > - SpringMVC：基于mvc的web框架
+    >   >
+    >   > - Spring：管理对象周期
+    >   >
+    >   >   > - 核心：
+    >   >   >   - IOC：解决对象管理和对象依赖问题
+    >   >   >     - 实现：把对象交给IOC容器管理(不太能理解，感觉有点像vue的store，但又比store强大)
+    >   >   >   - AOP：解决非业务代码抽取的问题
+    >   >   >
+    >   >   > - 日后需要理解的概念：
+    >   >   >   - [ ] 工厂模式 -> IOC -> 依赖注入\ 控制反转 
+    >   >   >   - [ ] 代理模式 -> AOP
 
-  - [ ] [多人协作场景](https://blog.csdn.net/Y125348369/article/details/87907729)
+- 2020/10/22
 
-  - [ ] 确认springboot环境配置完毕
+  - [ ] 熟悉IDEA的工具
 
-  - [ ] 创建一个SSM项目并跑起来
+  - [ ] 跑一个SSM项目
 
 
 

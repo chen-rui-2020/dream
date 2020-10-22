@@ -23,28 +23,28 @@
 
 - 2020.10.22
 
- - 熟悉了idea多人协作场景，分支的建立与合并。
+- 熟悉了idea多人协作场景，分支的建立与合并。
 
- - project和module的建立与彻底删除。
+- project和module的建立与彻底删除。
 
- - > - mybatis内部封装了JDBC（java数据库连接），不需要花费精力去加载驱动、创建连接、创建Statement等繁杂过程。
-   >
-   > - SpringbootApplication： 一个带有 main() 方法的类，用于启动应用程序
-   >
-   > - SpringbootApplicationTests：一个空的 Junit 测试了，它加载了一个使用 Spring Boot 字典配置功能的 Spring 应用程序上下文
-   >
-   > - application.properties：一个空的 properties 文件，可以根据需要添加配置属性
-   > - pom.xml： Maven 构建说明文件
-   > - 映射个URL：@RequestMapping({"",""}) 或 @RequestMapping(value={"",""}
+- > - mybatis内部封装了JDBC（java数据库连接），不需要花费精力去加载驱动、创建连接、创建Statement等繁杂过程。
+  >
+  > - SpringbootApplication： 一个带有 main() 方法的类，用于启动应用程序
+  >
+  > - SpringbootApplicationTests：一个空的 Junit 测试了，它加载了一个使用 Spring Boot 字典配置功能的 Spring 应用程序上下文
+  >
+  > - application.properties：一个空的 properties 文件，可以根据需要添加配置属性
+  > - pom.xml： Maven 构建说明文件
+  > - 映射个URL：@RequestMapping({"",""}) 或 @RequestMapping(value={"",""}
 
- - 解决了昨天遗留的问题：安装并配置了tomcat环境
+- 解决了昨天遗留的问题：安装并配置了tomcat环境
 
- -  完成web的创建过程
+-  完成web的创建过程
 
-   [创建web]: https://blog.csdn.net/myarrow/article/details/50824793
+  [创建web]: https://blog.csdn.net/myarrow/article/details/50824793
 
- - > 运行过程解决问题：
+- > 运行过程解决问题：
 
-   > - 端口被占用问题，解决方法，用了换端口的方法
-   > - 运行中出现无tomcat，是因为漏了在IDEA配置tomcat
-   > - 打包成war及复制到webapps方法：界面右侧的maven>lifecycle>clean>package右键>run maven build
+  > - 端口被占用问题，解决方法，用了换端口的方法
+  > - 运行中出现无tomcat，是因为漏了在IDEA配置tomcat
+  > - 打包成war及复制到webapps方法：界面右侧的maven>lifecycle>clean>package右键>run maven build

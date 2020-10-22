@@ -1,6 +1,6 @@
 # Learning-Plan
 
-###### 记录每日学习内容 (updated by 10.21)  ------ [CSDN笔记](https://blog.csdn.net/zhuangww05)
+###### 记录每日学习内容 (updated by 10.22)  ------ [CSDN笔记](https://blog.csdn.net/zhuangww05)
 
 | 任务 |                 内容                  |
 | :--: | :-----------------------------------: |
@@ -44,3 +44,23 @@
 - 在学习Spring-Boot之前复习了JavaSE基础
 
   >1.老生常谈的各种编程语言的基本数据类型、引用类型、常量、逻辑语句、数组、异常、继承、重写重载、抽象方法、封装方法、集合框架、泛型还有不是熟悉的多线程
+
+#### 2020.10.22
+
+- 入门Spring-Boot框架
+
+  > 1.安装IDEA
+  >
+  > 2.添加Spring Assistant插件
+  >
+  > 3.搭建Spring-Boot项目
+  >
+  > 4.学习yaml并配置application.yaml
+  >
+  > 5.学习@Value和ConfigurationProperities()为对象属性赋值
+  >
+  > 6.创建index.html并运行main()，通过本地地址访问页面
+  >
+  > 7.学习thymeleaf模板引擎
+
+- 分析Xboot-font前端页面源码

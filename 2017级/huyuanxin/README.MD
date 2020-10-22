@@ -46,11 +46,20 @@
 #### （2） CURD的demo
 
 - - [x] 已完成
-  - [ ] 完善
-  - [ ] 上传至GitHub
-  - [ ] 尝试加入前端
 
+### 2020.10.22
 
+#### （1） 完善CURD的demo
+
+- - [x] 已完成
+    * * [x] 单个对象的CURD
+      * [ ] 正在完成多个对象的CURD
+  - [x] 上传至GitHub  [GitHub链接](https://github.com/huyuanxin1999/LearnSSM)
+
+#### （2）学习Git冲突的解决方法。
+
+* * [x] 学会合并分支
+* * [x] 学会解决合并分支时出现冲突
 
 
 

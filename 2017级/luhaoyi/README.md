@@ -29,8 +29,8 @@
   - [x] 创建一个简单的demo并熟悉项目结构
   
     创建空目录 -> 创建新模块 -> 在模块下的src下创建一个package包 -> 在package包下新建一个类 -> 在类中编写代码 -> 代码区Ctrl+Shift+F10运行
-  
-  ![1603202651966](../../../../../../../大四/前端/命令/luhaoyi/pic/1603202651966.png)
+    
+    ![minidemo](./pic/1603202651966.png)
   
   - src：自己写的源码
   - out：编译后的文件(比如.class)
@@ -74,7 +74,7 @@
   
       File -> New -> Module from Existing Sources -> 选择模块名
   
-  - [ ] 配置环境
+  - [x] 配置环境
   
     - [x] Java环境
   
@@ -82,7 +82,7 @@
   
     - [x] 上传一个项目到GitHub(真的太方便了吧)
   
-      <img src="../../../../../../../大四/前端/命令/luhaoyi/pic/1603209074758.png" alt="1603209074758" style="zoom: 80%;" />
+      ![shareprojectonGithub](./pic/1603209074758.png)
   
     - [x] Maven镜像配置
   
@@ -102,7 +102,7 @@
   
   - [x] 创建一个HelloSpringboot项目
   
-    <img src="pic/1603298907466.png" alt="1603298907466" style="zoom:67%;" />
+    ![HelloSpringboot](./pic/1603298907466.png)
   
     - 常见报错
       - 提示：'settings.xml' has syntax errors -> settings-maven-修改Usersettingsfile为正确的settings.xml路径
@@ -140,9 +140,27 @@
 
 - 2020/10/22
 
-  - [ ] 熟悉IDEA的工具
+  - 熟悉IDEA的使用
 
-  - [ ] 跑一个SSM项目
+    - [x] 了解安装目录和设置目录
+      - 修改idea.exe.vmoptions
+      - 把 IntelliJ IDEA配置改坏时可以删除设置目录文件
+
+    - [x] 设置常见视图、查看ProjectStructure和设置常用的settings
+    - [x] 关联数据库、导入初始化数据库文件
+      - 连接数据库的URL后要添加“ ?serverTimezone=GMT%2B8 ”
+      - 修改数据库配置
+
+    - [x] 版本控制之git
+
+
+  - [x] 跑起来一个[Maven的单模块SSM项目](https://github.com/judasn/IntelliJ-IDEA-TutorialMaven)
+
+  ![Basic-Single-Moudle-SSM](./pic/image-20201022223358784.png)
+
+  - 不求甚解，道阻且长，确定下阶段的系统学习方向和小目标(整合一个SSM项目)
+
+- 2020/10/23
 
 
 

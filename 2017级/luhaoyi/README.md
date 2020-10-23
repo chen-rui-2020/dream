@@ -207,7 +207,7 @@
 
       - [x] 创建一个web项目
 
-        ![HelloTomcat](../../../../../../../大四/前端/命令/luhaoyi/pic/image-20201023141411806.png)
+        ![HelloTomcat](./pic/image-20201023141411806.png)
 
         - IDEA2020.2在创建完项目后要Add Framework support添加Web Application并确认create web.xml（如果没有Framwork就在setting里安装插件）
 
@@ -215,7 +215,7 @@
 
           - 导入的项目如果有以下，表示已经配置好tomacat
 
-          ![image-20201023135031862](../../../../../../../大四/前端/命令/luhaoyi/pic/image-20201023135031862.png)
+          ![tomcatrun](./pic/image-20201023135031862.png)
 
           - 没有显示或者新建项目需要在Edit Configuration添加
 
@@ -227,7 +227,7 @@
 
       - 执行原理
 
-        ![image-20201023161210375](../../../../../../../大四/前端/命令/luhaoyi/pic/image-20201023161210375.png)
+        ![Servlet执行原理](./pic/image-20201023161210375.png)
 
       - 生命周期方法
 

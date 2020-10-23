@@ -18,13 +18,14 @@
 
 2020/10/22
 
-#### 学习内容：
+## 学习内容：
 
-学习[用idea+maven创建web项目](http://blog.csdn.net/myarrow/article/details/50824793)
+- [x] 学习[用idea+maven创建web项目](http://blog.csdn.net/myarrow/article/details/50824793)
 
-#### 学习过程：
 
-##### 一、根据这个网址先去了解了IDEA、maven是什么
+## 学习过程：
+
+### 一、根据这个网址先去了解了IDEA、maven是什么
 
 > 1. IDEA 全称 IntelliJ IDEA，是java编程语言开发的集成环境。
 >
@@ -32,7 +33,7 @@
 
 我的理解就是，IDEA类似于学校学的visual studio这些软件，之前是用visual studio进行.net开发，现在是用IDEA进行java开发。并稍微了解了一些目前比较流行的java IDE (eclipse,myeclipse,IDEA). maven就是管理和构建项目框架的工具，有些类似vue-cli
 
-##### 二、 安装IDEA
+### 二、 安装IDEA
 
 安装的过程中，官网提供了社区免费版本，以及旗舰版本。一开始下载的是社区免费版本。
 
@@ -53,7 +54,7 @@
 > * jdb：Java调试器(debugger),可以逐行执行程序.设置断点和检查变Md
 > * jps：查看Java虚拟机进程列表 
 
-##### 三、配置maven和tomcat
+### 三、配置maven和tomcat
 
 发现自己安装的版本没有tomcat server，网上查阅了一些资料知道要**下载旗舰版**，因为免费版本少了许多功能。并去网上了解了tomcat是什么。
 
@@ -61,11 +62,11 @@
 
 个人理解就是用来部署web项目的，类似于IIS。
 
-##### 四、下载ultimate版本的IDEA并完成相关配置
+### 四、下载ultimate版本的IDEA并完成相关配置
 
 成功创建web项目
 
-##### 五、JAVA环境配置总结
+### 五、JAVA环境配置总结
 
 1. 下载java jdk, 建议是1.8版本以上，并配置jdk环境变量
 
@@ -78,4 +79,50 @@
 4. 配置maven，tomcat。
 
    
+
+------
+
+2020/10/23
+
+## 学习内容：
+
+- [x] 学习[用maven创建第一个spring boot web 程序](https://www.cnblogs.com/jiekzou/p/9202247.html)
+
+## 学习过程：
+
+### 一、先去网上简要了解了一下什么是spring boot，spring，mybatis
+
+> 1. Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来**简化新Spring应用的初始搭建以及开发**过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。另外SpringBoot通过集成大量的框架使得依赖包的版本冲突，以及引用的不稳定性等问题得到了很好的解决。
+>
+>    SpringBoot所具备的特征有：
+>
+>    * 可以创建独立的Spring应用程序，并且基于其Maven或Gradle插件
+>    * **内嵌Tomcat**或Jetty等Servlet容器
+>    * 提供自动配置的“starter”项目对象模型（POMS）以简化Maven配置
+>    * 尽可能自动配置Spring容器
+>    * 提供准备好的特性，如指标、健康检查和外部化配置
+>    * 绝对没有代码生成，不需要XML配置。 
+>
+> 2. Spring框架是Java平台上的一种开源应用框架
+>
+>    * Spring框架具有控制反转（IOC）特性，IOC旨在方便项目维护和测试
+>
+>    * Spring框架利用容器管理对象的生命周期,开发者可以通过依赖查找或依赖注入来获得对象。
+>    * Spring框架具有面向切面编程（AOP）框架,AOP框架主要针对模块之间的交叉关注点进行模块化
+>
+> 3. MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。
+
+我的理解是，Spring Boot项目开发代码的实现依然是使用spring+springMVC+mybatis等，只是利用了spring boot启动程序和自动配置简化Spring应用的初始搭建以及开发过程，提高开发效率。对spring框架的理解有待进一步加深，目前的简要理解就是有些像vue项目的通过下载依赖，配置依赖，然后再代码中通过import关键字引用，在代码中就可以使用依赖中的对象。关于MyBatis目前不理解它是怎么在项目中使用的。
+
+- [ ] 遗留问题：Mybatis在项目中的应用
+
+### 二、创建spring boot web 框架
+
+> File->New Project->Spring Initializr->不联网下载，使用maven创建->web->创建成功。
+
+------
+
+2020/10/24
+
+- [ ] 尝试将项目导入并运行
 

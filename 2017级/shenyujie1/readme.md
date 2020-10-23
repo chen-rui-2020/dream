@@ -48,3 +48,12 @@
   > - 端口被占用问题，解决方法，用了换端口的方法
   > - 运行中出现无tomcat，是因为漏了在IDEA配置tomcat
   > - 打包成war及复制到webapps方法：界面右侧的maven>lifecycle>clean>package右键>run maven build
+
+- 2020.10.23
+- MySQL的安装配置以及连到idea。
+- 今天主要就是导入单模块的ssm小项目，并运行起来。
+- 遇到问题
+  > - 解决未与 -source 1.7 一起设置引导类路径问题，通过修改settings.xml 文件配置解决。
+  > - 通过MySQL配置解决时区问题。
+  > - （项目跑的还算顺利？可能因为项目太小涉及范围小？）
+

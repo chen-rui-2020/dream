@@ -158,9 +158,82 @@
 
   ![Basic-Single-Moudle-SSM](./pic/image-20201022223358784.png)
 
-  - 不求甚解，道阻且长，确定下阶段的系统学习方向和小目标(整合一个SSM项目)
+- 不求甚解，道阻且长，确定下阶段的系统学习方向和小目标(整合一个SSM项目)
 
 - 2020/10/23
+
+  - 补充学习昨天跑项目疑惑的Javaweb基础
+
+    - [x] xml
+
+      - 复习xml概念、语法、组成部分
+      - 学会在xml中引入约束文档(DTD和Schema)
+      - 简单的读懂约束文档
+
+    - [x] Tomcat
+
+      - [x] 目录结构
+
+        - bin：可执行文件
+          - startup.bat/startup.sh(linux操作系统下)
+          - shutdown.bat
+
+        - conf：配置文件
+          - conf/server.xml下Connector节点可修改端口号
+
+        - log：日志文件，启动报错时可查看”Caused by:“
+
+        - webapps：存放web项目(相当于部署项目在web服务器下的root文件)
+
+        - work：存放运行时的数据(学完jsp再来理解一下)
+
+      - [x] 启动并访问、关闭
+
+        - 启动后不要关闭黑窗
+        - 启动报错”Address already  in use“的解决
+        - 尽量不要点击”×“强制关闭
+
+      - [x] 配置
+
+        - 部署项目的三种方式
+        - java动态项目的目录结构
+
+      - [x] 能看懂IDEA集成的tomcat设置了
+
+        (IDEA真的太强大了以至于小白使用 日常有种不塌实的迷茫感)
+
+        - 设置[on Update action](https://blog.csdn.net/xlb744868186/article/details/81017864) 
+        - Deployment -> Application context ：虚拟目录设置("/"表示根目录)
+
+      - [x] 创建一个web项目
+
+        ![HelloTomcat](../../../../../../../大四/前端/命令/luhaoyi/pic/image-20201023141411806.png)
+
+        - IDEA2020.2在创建完项目后要Add Framework support添加Web Application并确认create web.xml（如果没有Framwork就在setting里安装插件）
+
+        - 回想昨天导入的项目：
+
+          - 导入的项目如果有以下，表示已经配置好tomacat
+
+          ![image-20201023135031862](../../../../../../../大四/前端/命令/luhaoyi/pic/image-20201023135031862.png)
+
+          - 没有显示或者新建项目需要在Edit Configuration添加
+
+    - [x] Servlet：sever applet
+
+      - Servlet就是一个接口，定义了Java类被浏览器访问到(tomcat识别)的规则
+
+      - servlet在web.xml中的配置
+
+      - 执行原理
+
+        ![image-20201023161210375](../../../../../../../大四/前端/命令/luhaoyi/pic/image-20201023161210375.png)
+
+      - 生命周期方法
+
+
+- 2020/10/24
+  - [ ] 跑一个Springboot项目
 
 
 

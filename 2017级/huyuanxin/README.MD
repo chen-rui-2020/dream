@@ -86,12 +86,12 @@
   * [x] 学习获取http发送的Json请求
 
     ```java
-        @RequestMapping(value = "/getUserList", method = RequestMethod.GET)
+       	// RequestBody接收
+    	@RequestMapping(value = "/getUserList", method = RequestMethod.GET)
         public List<User> getUserList(
                 @RequestBody List<User> list) {
             return list;
         }
-    	// RequestBody接收
     ```
 
 ### 2020.10.23
@@ -116,4 +116,6 @@
 
 * * [x] 已完成
     * * [x] 单个对象的CURD
-    * * [ ] 完成多个对象的CURD(今日可以完成，完成后再次更新)
+    * * [x] 完成多个对象的CURD
+    * * [x] 完善代码
+    * * [x] 更新至GitHub   [GitHub链接](https://github.com/huyuanxin1999/LearnSSM)

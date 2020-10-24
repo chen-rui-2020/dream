@@ -53,7 +53,6 @@
 
 - - [x] 已完成
     * * [x] 单个对象的CURD
-      * [ ] 正在完成多个对象的CURD
   - [x] 上传至GitHub  [GitHub链接](https://github.com/huyuanxin1999/LearnSSM)
 
 #### （2）学习Git冲突的解决方法。
@@ -63,15 +62,58 @@
 
 
 
+### 2020.10.23
 
+#### （1）学习用新的方式获得请求参数
 
+* * [x] 学习@RequestParam代替HttpServletRequest
 
+    ```java
+        @RequestMapping(value = "/deleteUserByUid", method = RequestMethod.DELETE)
+        public int delete(
+                @RequestParam("id") int uid) {
+            return userService.deleteOneByUid(uid);
+        }
+    
+    	// 等同于
+        @RequestMapping(value = "/deleteUserByUid", method = RequestMethod.DELETE)
+        public int delete(HttpServletRequest request){
+            int uid= Integer.parseInt(request.getParameter("id"));
+            return userService.deleteOneByUid(uid);
+        }
+    ```
 
+  * [x] 学习获取http发送的Json请求
 
+    ```java
+        @RequestMapping(value = "/getUserList", method = RequestMethod.GET)
+        public List<User> getUserList(
+                @RequestBody List<User> list) {
+            return list;
+        }
+    	// RequestBody接收
+    ```
 
+### 2020.10.23
 
+#### （1）Json字段自定义
 
+* * [x] 解决返回Json开头小写和发送接收的问题
 
+    ```java
+    //  以这个为例子返回为["Uid":value]，若没有 @JsonProperty("Uid"),则返回字段为["uid":value]
+    public class User {
+        private long Uid;
+        
+    @JsonProperty("Uid")
+        public long getUid() {
+            return Uid;
+        }
+    }
+    ```
 
+#### （2）完善CURD的demo
 
-
+* * [x] 已完成
+    * * [x] 单个对象的CURD
+    * * [ ] 完成多个对象的CURD(今日可以完成，完成后再次更新)

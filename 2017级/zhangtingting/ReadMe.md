@@ -124,5 +124,29 @@
 
 2020/10/24
 
-- [ ] 尝试将项目导入并运行
+## 学习内容：
+
+- [ ] 导入EasyEE项目
+
+## 学习过程：
+
+- [x] 安装MySQL5.7
+
+- [x] 安装 `Maven local artifact install/` 下的 Maven 本地库
+
+- [x] 创建数据库
+
+  执行相应 SQL 脚本 `database\DATABASE_easyee_LANGUAGE[_COUNTRY].sql`
+
+  - MySQL
+
+    ```
+    mysql> source MySQL_easyee_LANGUAGE[_COUNTRY].sql
+    ```
+
+- [ ] 编辑 JDBC 数据库连接配置参数
+
+  * Spring Boot: `src/main/resources/application.properties`
+
+  
 

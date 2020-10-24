@@ -233,7 +233,59 @@
 
 
 - 2020/10/24
+
+  - [x] 跑起来一个[Maven的多模块SSM项目](https://github.com/judasn/Basic-Multi-Module-SSM)
+
   - [ ] 跑一个Springboot项目
+
+    - 没有跑起来，去了解了一下Springboot项目的基本设置
+
+    > pom.xml：真正管理SpringBoot项目里所依赖的版本
+    >
+    > - 以后我们导入依赖默认是不需要写版本(没有在dependencies里面管理的依赖需要声明版本)
+    >
+    >   > spring-boot-starter-web：
+    >
+    >   - spring-boot-starter：spring-boot场景启动器，帮我们导入了web模块正常运行所依赖的各种组件
+    >
+    >   - spring-boot将所有场景都抽取出来，做成一个个starters(启动器)，只要在项目里引入这些starter相关的场景的所有依赖都会导入进来，用什么功能就导入什么spring-boot-starter
+
+    > @SpringBootApplication：说明这个类是SpringBoot的主配置类；SpringBoot就应该运行这个类的main方法来启动项目
+    >
+    > @SpringBootConfiguration：SpringBoot的配置类
+    >
+    > @Configuration：配置类也是容器中的一个组件@Component（这个不太理解）
+    >
+    > @EnableAutoConfiguration：开启自动配置功能(将所在主配置类所在的包及下面的所有子包里面的所有组件扫描到Spring容器里)
+    >
+    > - Application文件要和controller、service、dao等文件夹同一级
+
+    > 参数传递：
+    >
+    > - 通过url传参：
+    >
+    >   > - get方式：
+    >   >   - @PathVariable 即：url/id/0305形式
+    >   >   - @RequestParm 即：url？username=luhaoyi形式
+    >
+    >   > - post方式：
+    >   >   - @RequestParm
+    >   >   - 请求体中加入文本
+    >
+    >   > 配置文件传参
+
+    > 创建Springboot项目的三种方式：
+    >
+    > - spring initializar
+    > - 创建Maven项目手动添加依赖
+    > - [生成定制项目](https://start.spring.io/)
+
+    > 两种运行方式：
+    >
+    > - 在IDEA中直接运行
+    > - 发布jar包运行：在pom.xml中导入maven插件 -> idea打包成jar包 -> 在终端通过 `java -jar xxx.jar` 启动
+    >
+    > （SpringBoot使用嵌入式Tomcat无需再配置Tomcat）
 
 
 

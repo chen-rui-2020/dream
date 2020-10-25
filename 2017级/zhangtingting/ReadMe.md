@@ -29,9 +29,9 @@
 
 > 1. IDEA 全称 IntelliJ IDEA，是java编程语言开发的集成环境。
 >
-> 2. Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的项目管理工具软件。的Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的项目管理工具软件。软件。
+> 2. Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的项目管理工具软件。
 
-我的理解就是，IDEA类似于学校学的visual studio这些软件，之前是用visual studio进行.net开发，现在是用IDEA进行java开发。并稍微了解了一些目前比较流行的java IDE (eclipse,myeclipse,IDEA). maven就是管理和构建项目框架的工具，有些类似vue-cli
+我的理解就是，IDEA类似于学校学的visual studio这些软件，之前是用visual studio进行.net开发，现在是用IDEA进行java开发。并稍微了解了一些目前比较流行的java IDE (eclipse,myeclipse,IDEA). maven就是管理和构建项目框架的工具，相当于.net中的nuget，是一个**包管理工具**。
 
 ### 二、 安装IDEA
 
@@ -144,9 +144,31 @@
     mysql> source MySQL_easyee_LANGUAGE[_COUNTRY].sql
     ```
 
-- [ ] 编辑 JDBC 数据库连接配置参数
+  
+
+  
+
+2020/10/25
+
+## 学习内容：
+
+- [ ] 导入EasyEE项目
+
+## 学习过程：
+
+- [x] 编辑 JDBC 数据库连接配置参数
 
   * Spring Boot: `src/main/resources/application.properties`
 
-  
+    ![image-20201025231321116](F:\git仓库\2020.10.24\dream\2017级\zhangtingting\img\image-20201025231321116.png)
+
+- [ ] 启动
+
+  - Spring Boot: `mvn compile spring-boot:run`
+
+    导入出了一些问题，正在解决。
+
+    
+
+
 

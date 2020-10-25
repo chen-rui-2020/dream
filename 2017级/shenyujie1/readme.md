@@ -14,12 +14,14 @@
   - 了解github和git的使用，清楚了git上传项目的步骤
   - 对markdown的一些语法有了认识，但是还不够熟练，要多练练
   - 细心，耐心，加油！！
+---
 
 - 2020.10.21
   - 下载jdk8，配置。下载IDEA，配置Maven，基本完成java spring boot基本配置。
   - 今天转向学习用IDEA提交计划
   - 跟着创建了项目并运行，但结果好像有点不一样，不知道是不是因为Tomcat还没安装和配置的原因，网上好像说有内置的？所以到底要不要安装呢？（思考，明天再看看
     [教程]: https://blog.csdn.net/qq_40147863/article/details/84194493
+---
 
 - 2020.10.22
 
@@ -48,6 +50,7 @@
   > - 端口被占用问题，解决方法，用了换端口的方法
   > - 运行中出现无tomcat，是因为漏了在IDEA配置tomcat
   > - 打包成war及复制到webapps方法：界面右侧的maven>lifecycle>clean>package右键>run maven build
+---
 
 - 2020.10.23
   - MySQL的安装配置以及连到idea。
@@ -55,9 +58,17 @@
   - 遇到问题
   > - 解决未与 -source 1.7 一起设置引导类路径问题，通过修改settings.xml 文件配置解决。
   > - 通过MySQL配置解决时区问题。
+---
 
 - 2020.10.24
 - 再梳理一遍ssm单模块的运行过程
 - 跑ssm多模块
 - 跑成功了，但是感觉不甚理解！！！
+---
+
+- 2020.10.25
+- - 导入https://github.com/liyifeng1994/ssm这里的项目，这个项目是eclipse的，上网找了idea导入eclipse项目方法，但是暂时还没跑成功。
+- - 看了https://blog.csdn.net/qq598535550/article/details/51703190，也就是上述项目搭建过程，但是还没上手搭，打算先把这个项目跑起来。
+
+
 

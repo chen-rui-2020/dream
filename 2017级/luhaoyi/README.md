@@ -1,4 +1,4 @@
-# 学习计划
+学习计划
 
 ## 一、Spring-boot
 
@@ -289,3 +289,25 @@
 
 
 
+- 2020/10/25
+
+  - 学习了队友的CURD demo然后去了解了相关知识
+
+    - 目前对CURD的认识(以该项目为例)
+      1. 创建数据库表，创建对应的实体User
+      2. 在application.properties中设置连接数据库的配置(也可以在Mybatis核心配置文件中配置)
+      3. 在映射文件UserMapper.xml中写数据库操作语句
+      4. UserMapper相当于DAO，按照接口规范实现了接口代理(也可以定义接口，手动实现)
+      5. 业务逻辑层：api下的UserService定义了接口，service下的UserServicesImpl实现
+      6. controller暂时没看懂，明天去学学注解
+
+    - 了解了Mybatis映射文件的组成
+
+    - 数据操作注意
+
+      - sql语句中使用#{ 实体属性名 }方式引用实体中的属性值
+      - 使用的API是sqlSession.insert/update/delete("命名空间.id",实体对象)
+
+      - 增删改涉及数据库操作要使用sqlSession.commit()
+
+    - 实现接口代理的接口规范

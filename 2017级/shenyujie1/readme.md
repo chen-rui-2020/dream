@@ -67,12 +67,7 @@
 ---
 
 - 2020.10.25
-- [导入]: https://github.com/liyifeng1994/ssm
-
-  项目，这个项目是eclipse的，上网找了idea导入eclipse项目方法，但是暂时还没跑成功。
-
-- [看了]: https://blog.csdn.net/qq598535550/article/details/51703190
-
-  也就是上述项目搭建过程，但是还没上手搭，打算先把这个项目跑起来。
+- - [导入该项目](https://github.com/liyifeng1994/ssm)，这个项目是eclipse的，上网找了idea导入eclipse项目方法，但是暂时还没跑成功。
+- - [看了](https://blog.csdn.net/qq598535550/article/details/51703190)，也就是上述项目搭建过程，但是还没上手搭，打算先把这个项目跑起来。
 
 

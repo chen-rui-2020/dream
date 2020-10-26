@@ -69,5 +69,10 @@
 - 2020.10.25
 - - [导入该项目](https://github.com/liyifeng1994/ssm)，这个项目是eclipse的，上网找了idea导入eclipse项目方法，但是暂时还没跑成功。
 - - [看了](https://blog.csdn.net/qq598535550/article/details/51703190)，也就是上述项目搭建过程，但是还没上手搭，打算先把这个项目跑起来。
+---
+
+- 2020.10.26
+
+- > 今天一天都在一步一步跟着搭建，出现一堆问题，有些就算搜索解决了，但是也不知道原因是什么，可能性太多，是时候去看https://www.cnblogs.com/xdp-gacl/tag/JavaWeb%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/default.html?page=3
 
 

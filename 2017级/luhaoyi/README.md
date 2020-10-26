@@ -101,9 +101,9 @@
 
 
       - 创建一个web项目
-
+    
     - [x] Servlet：sever applet
-
+    
       - 执行原理
       - 生命周期
 
@@ -115,21 +115,24 @@
   - [ ] 跑一个Springboot项目
 
     - 没有跑起来，去了解了一下Springboot项目的基本设置
-  - pom.xml
-      - 配置类注解
-      - 参数传递的方式
-      - 创建Springboot项目的三种方式
-      - Springboot项目的两种运行方式
     
+    - pom.xml
+    
+    - 配置类注解
+    - 参数传递的方式
+    - 创建Springboot项目的三种方式
+    - Springboot项目的两种运行方式
 
 - 2020/10/25
 
   - 学习了队友的CURD demo然后去了解了相关知识
 
     - 对写CURD有整体的思路
-
-    - 了解了Mybatis映射文件的组成
-
+- 了解了Mybatis映射文件的组成
     - 数据操作的注意事项
+- 实现接口代理的接口规范
 
-    - 实现接口代理的接口规范
+- 2020/10/26
+  - 了解了SpringMVC的开发过程和执行流程
+  - 练习了SpringMVC的常用注解
+  - 用postman测试CURD demo的请求出现问题，正在解决

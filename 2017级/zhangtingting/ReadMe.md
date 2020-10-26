@@ -168,7 +168,43 @@
 
     导入出了一些问题，正在解决。
 
-    
+
+
+2020/10/26
+
+## 学习内容：
+
+- [ ] 导入EasyEE项目
+
+## 学习过程：
+
+- [ ] 启动
+
+  - 找出错原因
+
+    ![image-20201026204019077](F:\git仓库\2020.10.25\dream\2017级\zhangtingting\img\image-20201026204019077.png)
+
+  ​       
+
+- [x] 了解了[jar包和war包的区别](https://www.cnblogs.com/wenzheshen/articles/6307696.html)
+
+- [x] SringBoot的简化部署
+
+  导入SpringBoot的maven插件，可以把应用打成jar包，直接使用java -jar命令运行
+
+- [x] 学习Spring常见注解类
+
+  **@RequestMapping**
+
+  > ```
+  > @RequestMapping是Spring Web应用中最常见的注解之一，它主要将Http的请求映射到我们的控制器和处理方法上。
+  > ```
+
+  **@RestController**注解，相当于**@Controller+@ResponseBody**两个注解的结合，返回json数据不需要在方法前面加@ResponseBody注解了，但使用@RestController这个注解，就不能返回jsp,html页面，视图解析器无法解析jsp,html页面
+
+  
+
+
 
 
 

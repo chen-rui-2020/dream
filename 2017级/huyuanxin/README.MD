@@ -94,7 +94,7 @@
         }
     ```
 
-### 2020.10.23
+### 2020.10.24
 
 #### （1）Json字段自定义
 
@@ -119,3 +119,15 @@
     * * [x] 完成多个对象的CURD
     * * [x] 完善代码
     * * [x] 更新至GitHub   [GitHub链接](https://github.com/huyuanxin1999/LearnSSM)
+
+### 2020.10.25-2020.10.27
+
+	#### （1）掌握SpringBoot多模块的创建
+
+* * [x] 掌握创建多模块
+* * [x]  掌握各模块的依赖关系
+* * [x] 上传快速创建项目到GitHub[GitHub链接](https://github.com/huyuanxin1999/SpringBootMultiMoudle)
+
+#### （2）改单模块CURD为多模块
+
+* * [x] 修改完成（后续进行完善和上传）

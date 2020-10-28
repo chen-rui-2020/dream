@@ -10,7 +10,10 @@
 
 ## Step 2
 
- 根据Step 1实施情况后续再做调整
+1. 学习Spring注解开发
+
+2. SpingMVC数据响应、请求的实现
+3. Mybatis的增删改查
 
 
 
@@ -231,16 +234,37 @@
   > | - - - sql         |       其实这个可以没有，但是为了项目完整性还是加上吧。       |
   > | - - - webapp      | 这个貌似是最熟悉的目录了，用来存放我们前端的静态资源，如jsp js css。 |
   > | - - - - resources |      这里的资源是指项目的静态资源，如js css images等。       |
-  > | - - - - WEB-INF   | 很重要的一个目录，外部浏览器无法访问，只有羡慕内部才能访问，可以把jsp放在这里，另外就是web.xml了。你可能有疑问了，为什么上面java中的resources里面的配置文件不妨在这里，那么是不是会被外部窃取到？你想太多了，部署时候基本上只有webapp里的会直接输出到根目录，其他都会放入WEB-INF里面，项目内部依然可以使用classpath:XXX来访问，好像IDE里可以设置部署输出目录，这里扯远了~ |
+  > | - - - - WEB-INF   | 很重要的一个目录，外部浏览器无法访问，只有内部才能访问，可以把jsp放在这里，另外就是web.xml了。部署时候基本上只有webapp里的会直接输出到根目录，其他都会放入WEB-INF里面，项目内部依然可以使用classpath:XXX来访问 |
   > | - test            |                       这里是测试分支。                       |
   > | - - java          | 测试java代码，应遵循包名相同的原则，这个文件夹同样要使用Build Path -> Use as Source Folder，这样看包结构会方便很多。 |
   > | - - resources     |                很少用到，但这个是maven的规范                 |
 
   
 
+2020/10/28
 
+## 学习内容：
 
+- [ ] Spring
 
+## 学习收获：
 
+- [x] Spring的核心容器，可以认为IOC
 
+  1.Beans:产生Bean，某个对象
 
+  2.Core：核心
+
+  3.Content：上下文
+
+  4.SpEL：Spring表达式语言
+
+- [x] webjars：以jar包的方式引入静态资源
+
+- [x] alter+insert：有参无参构造，getter and setter /直接引入
+
+- [x] @ConfigurationProperties（prefix=“ ”）作用
+
+  通过把yml配置文件中配置的每个属性的值，映射到这个组件（Bean）中，一一对应
+
+  只有通过@Componant注解，将Bean注册为Spring容器中的组件以后，才能使用Spring提供的@ConfigurationProperties功能

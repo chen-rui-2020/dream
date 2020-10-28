@@ -74,5 +74,10 @@
 - 2020.10.26
 
 - > 今天一天都在一步一步跟着搭建，出现一堆问题，有些就算搜索解决了，但是也不知道原因是什么，可能性太多，是时候去看https://www.cnblogs.com/xdp-gacl/tag/JavaWeb%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/default.html?page=3
-
+---
+- 2020.10.27~28
+1. 去详细了解了控制反转和依赖对象。
+2. 整理了几种改端口的方法，几种tomcat虚拟目录映射方法。
+3. 了解了tomcat配置虚拟主机和浏览器与服务器交互过程。
+4. tomcat加密连接互联网 https://www.cnblogs.com/xdp-gacl/p/3744053.html （加密方式，生成数字证书，配置HTTPS连接器，增删CA数字证书）
 

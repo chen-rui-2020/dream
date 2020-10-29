@@ -268,3 +268,16 @@
   通过把yml配置文件中配置的每个属性的值，映射到这个组件（Bean）中，一一对应
 
   只有通过@Componant注解，将Bean注册为Spring容器中的组件以后，才能使用Spring提供的@ConfigurationProperties功能
+
+2020/10/29
+
+## 学习内容：
+
+- [x] Spring的核心机制Bean和依赖注入
+
+## 学习收获：
+
+- [x] 理解了什么是Bean以及Spring容器如何通过Bean来创建对象
+- [x] Bean的作用域以及创建时机
+- [x] 理解了什么是Bean的依赖注入，以及常见的两种依赖注入的方法
+- [x] 学习了Spring通过组件扫描注解的方式创建java对象以及依赖注入，以及注解如何使用

@@ -81,3 +81,8 @@
 3. 了解了tomcat配置虚拟主机和浏览器与服务器交互过程。
 4. tomcat加密连接互联网 https://www.cnblogs.com/xdp-gacl/p/3744053.html （加密方式，生成数字证书，配置HTTPS连接器，增删CA数字证书）
 
+---
+- 2020.10.29
+- 学习了mybatis一些相关内容。
+
+

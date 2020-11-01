@@ -1,25 +1,36 @@
-# SSM入门计划
-好好努力  好好生活
+# 实现SpringBoot框架开发
 
-## Step 1
 
-1. 环境搭建（Java开发环境，Spring-boot开发环境，MySQL环境）。
+你只管努力 其它的交给天意
+
+## Step 1 初步了解SpringBoot
+
+（了解springboot是什么，代码如何实现）
+
+1. 环境搭建（下载安装Java开发工具）。
 2. 新建Web项目
 3. 导入一个完整的Web项目
 4. 从零开始搭建SSM项目
 
-## Step 2
+## Step 2 开始学习SSM的核心部分
 
-1. 学习Spring注解开发
+（Spring Boot项目开发代码实现使用spring+springMVC+mybatis等）
 
+1. 学习Spring IOC
 2. SpingMVC数据响应、请求的实现
 3. Mybatis的增删改查
 
+## Step3 深入学习SSM
 
 
-# Learning situation every day
 
-2020/10/22
+
+
+# 每日学习记录
+
+
+
+# 2020/10/22
 
 ## 学习内容：
 
@@ -85,7 +96,7 @@
 
 ------
 
-2020/10/23
+# 2020/10/23
 
 ## 学习内容：
 
@@ -125,7 +136,9 @@
 
 ------
 
-2020/10/24
+
+
+# 2020/10/24
 
 ## 学习内容：
 
@@ -147,11 +160,11 @@
     mysql> source MySQL_easyee_LANGUAGE[_COUNTRY].sql
     ```
 
-  
+  ------
 
   
 
-2020/10/25
+# 2020/10/25
 
 ## 学习内容：
 
@@ -173,7 +186,7 @@
 
 
 
-2020/10/26
+# 2020/10/26
 
 ## 学习内容：
 
@@ -207,7 +220,7 @@
 
   
 
-2020/10/27
+# 2020/10/27
 
 ## 学习内容：
 
@@ -241,7 +254,7 @@
 
   
 
-2020/10/28
+# 2020/10/28
 
 ## 学习内容：
 
@@ -268,8 +281,10 @@
   通过把yml配置文件中配置的每个属性的值，映射到这个组件（Bean）中，一一对应
 
   只有通过@Componant注解，将Bean注册为Spring容器中的组件以后，才能使用Spring提供的@ConfigurationProperties功能
+  
+  
 
-2020/10/29
+# 2020/10/29
 
 ## 学习内容：
 
@@ -278,11 +293,16 @@
 ## 学习收获：
 
 - [x] 理解了什么是Bean以及Spring容器如何通过Bean来创建对象
+
 - [x] Bean的作用域以及创建时机
+
 - [x] 理解了什么是Bean的依赖注入，以及常见的两种依赖注入的方法
+
 - [x] 学习了Spring通过组件扫描注解的方式创建java对象以及依赖注入，以及注解如何使用
 
-2020/10/30
+  
+
+# 2020/10/30
 
 ## 学习内容：
 
@@ -291,11 +311,16 @@
 ## 学习收获：
 
 - [x] 明白了druid，C3P0，DBCP,BoneCP是什么
+
 - [x] 如何通过Spring配置文件配置数据源连接信息，实现代码解耦
+
 - [x] 如何在Spring配置文件中加载外部的.properties文件。
+
 - [x] 明白了"${}"即Spring的SpEL
 
-2020/10/31
+  
+
+# 2020/10/31
 
 ## 学习内容：
 
@@ -320,9 +345,37 @@
 - [x] Spring集成junit步骤
 
   1. 导入spring集成junit的坐标 （spring-test）
-  2. 使用@runwith注解替换原来的运行期
-  3. 使用@contextconfiguration指定配置文件或配置类
-  4. 使用@autowired注入需要测试的对象
-  5. 创建测试方法进行测试
-
   
+  2. 使用@runwith注解替换原来的运行期
+  
+  3. 使用@contextconfiguration指定配置文件或配置类
+
+  4. 使用@autowired注入需要测试的对象
+  
+  5. 创建测试方法进行测试
+  
+     
+
+# 2020/11/1
+
+## 学习内容：
+
+- [x] Spring jdbc template基本使用
+- [x] Spring集成web环境
+- [x] Spring MVC入门
+
+## 学习收获：
+
+- [x]  会使用jdbc template对象进行数据库的CRUD
+- [x] 会使用Spring提供的WebApplicationContextUtils获取应用上下文对象。
+- [x] Spring MVC开发步骤:
+  1. 导入 SpringMVC相关坐标
+  2. 配罩SpringMVC核心控制器 DispathcerServlet
+  3. 创建 Controllers类和视图页面
+  4. 使用注解配置 Controller类中业务方法的映射地址
+  5. 配置 SpringMVC核心文件 spring-mvc.xml
+  6. 客户端发起请求测试
+
+## 学习困难：
+
+servlet的知识不了解

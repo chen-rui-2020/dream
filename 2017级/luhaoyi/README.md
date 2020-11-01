@@ -176,5 +176,38 @@
     - 基于xml和注解的IOC配置
     - 常用注解
 
-- 2020/10/30+
-  - 学习一个SSM+easyui的项目
+- 2020/11/1
+
+  - [ ] 学习SSM+easyui的项目
+
+    - 掌握了eclipse项目导入IDEA的方法
+
+    - 学习了SSM+easyui的CURD demo：大致了解数据操作返回的结果渲染到ui模板上的思路
+
+    - 学习jsp：运行原理、执行过程、内置对象、域对象
+
+    - 学习el表达式：运算、常见对象、特定域的属性、pageContext 对象
+
+    - request对象
+
+      ```
+      获取虚拟目录：/curd
+      String getContextPath()
+      
+      获取请求URI：/curd/demo1
+      String getRequestURI():		/curd/demo1
+      StringBuffer getRequestURL()  :http://localhost/curd/demo1
+      
+      请求转发
+      request.getRequestDispatcher(String path).forward(request,response) 
+      
+      共享数据
+      void setAttribute(String name,Object obj)
+      Object getAttitude(String name)
+      void removeAttribute(String name)
+      ```
+
+- 2020/11/2
+  - [ ] 学习SSM+easyui的项目
+    - 学习easyui
+    - 尝试理解更复杂数据的交互

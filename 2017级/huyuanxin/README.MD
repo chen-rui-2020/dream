@@ -134,4 +134,12 @@
 * * [x] 完善
 * * [x] 上传GitHub[GitHub链接](https://github.com/huyuanxin1999/SpringBootMultiMoudleDemo)
 
-遇到瓶颈，无法解决，待解决后上传一个项目
+### 2020.10.27-2020.11.1
+
+#### 这段时间踩了一堆的坑
+
+* * [x] Spring Boot+EasyUI demo运行
+* * [x] 学会thymeleaf配置静态文件
+* * [x] 写一写简单的页面
+* * [x] 学习了dto层
+* * [x] 为原来单模块的项目加入dto层(完善后上传GitHub)

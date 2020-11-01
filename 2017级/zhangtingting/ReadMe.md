@@ -294,3 +294,35 @@
 - [x] 如何通过Spring配置文件配置数据源连接信息，实现代码解耦
 - [x] 如何在Spring配置文件中加载外部的.properties文件。
 - [x] 明白了"${}"即Spring的SpEL
+
+2020/10/31
+
+## 学习内容：
+
+- [x] Spring新注解和集成Junit
+
+## 学习收获：
+
+- [x] 知道了什么是全注解类，@configuration指定当前类是Spring的核心配置类，当创建容器时会从该类上加 吧 载注解
+
+  （用全注解类代替XML文件，用注解代替标签）
+
+  @componentscan用于指定Spring容器在初始化容器时要扫描的包，扫描哪些包有注解，然后创建对象
+
+  @Bean使用在**方法**上，将该方法的返回值存储到Spring容器中（针对**非自定义**的Bean的配置）
+
+  （@component用于实例化**自定义**的类，）
+
+  @PropertySource加载.properties文件中的配置
+
+  @import 导入其它配置类
+
+- [x] Spring集成junit步骤
+
+  1. 导入spring集成junit的坐标 （spring-test）
+  2. 使用@runwith注解替换原来的运行期
+  3. 使用@contextconfiguration指定配置文件或配置类
+  4. 使用@autowired注入需要测试的对象
+  5. 创建测试方法进行测试
+
+  

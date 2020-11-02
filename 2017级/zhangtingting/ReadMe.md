@@ -379,3 +379,21 @@
 ## 学习困难：
 
 servlet的知识不了解
+
+# 2020/11/2
+
+## 学习内容：
+
+- [x] servlet简要学习
+- [x] Spring  MVC数据响应-页面跳转和回写数据
+
+## 学习收获：
+
+- [x] 知道了servlet在web项目中的作用
+
+- [x] 通过学习servlet接口实现类的开发步骤了解到了抽象类的作用、子类实现接口的规则、this指向和继承规则
+
+- [x] 通过学习servlet后再学习spring MVC知道Spring MVC在web项目中起到什么作用
+
+  
+

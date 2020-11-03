@@ -207,7 +207,11 @@
       void removeAttribute(String name)
       ```
 
-- 2020/11/2
+- 2020/11/2-3
+
   - [ ] 学习SSM+easyui的项目
     - 学习easyui
     - 尝试理解更复杂数据的交互
+
+  - 学习困难：
+    - 数据操作返回的结果如何转化为easyui中组件渲染所需要的格式

@@ -148,4 +148,8 @@
 
 * * [x] Spring Boot+EasyUI项目的编写
 
-    出现一些问题，dto格式化json后，获取出现了问题，待解决
+### 2020.11.3
+
+* * [x] 解决dto格式化json后，获取出现的问题
+* * [x] EasyUI DataGrid分页的问题
+* * [x] 更新到GitHub [GitHub链接 LearnSSM](https://github.com/huyuanxin1999/LearnSSM)

@@ -1,5 +1,3 @@
-# 实现SpringBoot框架开发
-
 
 你只管努力 其它的交给天意
 
@@ -380,12 +378,16 @@
 
 servlet的知识不了解
 
+------
+
+
+
 # 2020/11/2
 
 ## 学习内容：
 
 - [x] servlet简要学习
-- [x] Spring  MVC数据响应-页面跳转和回写数据
+- [ ] Spring  MVC数据响应-页面跳转
 
 ## 学习收获：
 
@@ -397,3 +399,18 @@ servlet的知识不了解
 
   
 
+------
+
+# 2020/11/3
+
+## 学习内容：
+
+- [x] Spring  MVC数据响应-回写数据
+- [ ] Spring MVC获得请求数据
+
+## 学习收获：
+
+- [x] 通过配置MappingHandlerAdapter，SpringMVC自动将对象转换成json格式的数据返回
+- [x] 通过`<mvc：annotation-driven`>注解驱动替代MappingHandlerAdapte的配置。
+- [x] 理解@requestbody这个注解的作用
+- [x] 明白了SpringMVC如何将获得的POJO参数类型封装成实体（参数名和属性名一致，将参数值进行注入）

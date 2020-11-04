@@ -207,11 +207,35 @@
       void removeAttribute(String name)
       ```
 
-- 2020/11/2-3
+- 2020/11/2
 
-  - [ ] 学习SSM+easyui的项目
-    - 学习easyui
-    - 尝试理解更复杂数据的交互
+  - 学习SSM+easyui的项目
 
-  - 学习困难：
-    - 数据操作返回的结果如何转化为easyui中组件渲染所需要的格式
+- 2020/11/3
+
+  - easyui引用组件及添加扩展的一般方法
+  - easyui的基本组件
+
+  - easyui的form提交和ajax提交
+  - form序列化对象的方法
+
+  - [ ] datagrid的增删改查
+    - 学习困难：数据操作返回的结果如何转化为easyui中组件渲染所需要的格式
+
+- 2020/11/4
+
+  - SpingMVC的组件
+
+  - 请求映射注解和视图解析器配置
+
+  - SpingMVC数据响应（页面跳转和回写数据）
+
+  - SpingMVC请求（基本、POJO、数组、集合类型参数）
+
+  - 静态资源访问的配置
+
+  - 了解了POJO、PO、DTO、VO
+
+  - json的数据交互：json报文、接口规范(响应报文规范、请求数据规范、HTTP状态码)
+
+    

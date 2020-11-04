@@ -82,7 +82,7 @@
 4. tomcat加密连接互联网 https://www.cnblogs.com/xdp-gacl/p/3744053.html （加密方式，生成数字证书，配置HTTPS连接器，增删CA数字证书）
 
 ---
-- 2020.10.29-31
+- 2020.10.29
 1. 搭建mybatis开发环境（xml的）
 
    > 1. 创建maven工程
@@ -123,3 +123,12 @@
   通过 ${} 可以将 parameterType 传入的内容拼接在 sql 中且不进行 jdbc 类型转换，
   ${}可以接收简单类型值或 pojo 属性值，如果 parameterType 传输单个简单类型值，
   ${}括号中只能是 value。
+
+---
+- 2020.11.2
+1. 基于xml的mybatis自定义
+2. 基于注解的mybatis自定义
+
+----
+- 2020.11.3
+- 学习spring

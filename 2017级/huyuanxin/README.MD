@@ -143,3 +143,21 @@
 * * [x] 写一写简单的页面
 * * [x] 学习了dto层
 * * [x] 为原来单模块的项目加入dto层(完善后上传GitHub)
+
+### 2020.11.2
+
+* * [x] Spring Boot+EasyUI项目的编写
+
+### 2020.11.3
+
+* * [x] 解决dto格式化json后，获取出现的问题
+* * [x] EasyUI DataGrid分页的问题
+* * [x] 更新到GitHub [GitHub链接 LearnSSM](https://github.com/huyuanxin1999/LearnSSM)
+
+### 2020.11.4
+
+* * [x] 学习ajax请求
+* * [x] 学习JavaScript部分语法
+* * [x] EasyUI 批量生成按钮
+* * [x] EasyUI DataGrid删除操作
+* * [x] 更新到GitHub [GitHub链接 LearnSSM](https://github.com/huyuanxin1999/LearnSSM)

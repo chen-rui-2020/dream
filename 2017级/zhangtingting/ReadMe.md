@@ -1,3 +1,4 @@
+# Spring Boot项目开发
 
 你只管努力 其它的交给天意
 
@@ -14,8 +15,8 @@
 
 （Spring Boot项目开发代码实现使用spring+springMVC+mybatis等）
 
-1. 学习Spring IOC
-2. SpingMVC数据响应、请求的实现
+1. 学习Spring 概述，了解Spring核心机制及在项目中的应用
+2. 了解SpingMVC它在项目开发中充当什么角色发挥什么作用
 3. Mybatis的增删改查
 
 ## Step3 深入学习SSM
@@ -412,5 +413,22 @@ servlet的知识不了解
 
 - [x] 通过配置MappingHandlerAdapter，SpringMVC自动将对象转换成json格式的数据返回
 - [x] 通过`<mvc：annotation-driven`>注解驱动替代MappingHandlerAdapte的配置。
-- [x] 理解@requestbody这个注解的作用
-- [x] 明白了SpringMVC如何将获得的POJO参数类型封装成实体（参数名和属性名一致，将参数值进行注入）
+- [x] 理解@responsebody这个注解的作用
+- [x] 明白了SpringMVC如何将获得的POJO参数类型封装成实体（参数名和属性名一致，将参数值进行注入）   
+
+------
+
+
+
+# 2020/11/4
+
+## 学习内容：
+
+- [x] Spring  MVC拦截器
+- [ ] Spring AOP
+
+## 学习收获
+
+- [x] 明白Spring MVC拦截器的作用 
+- [x] 拦截器链执行顺序
+- [x] 了解了动态代理的思想和作用

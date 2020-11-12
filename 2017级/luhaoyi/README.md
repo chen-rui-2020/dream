@@ -238,4 +238,10 @@
 
   - json的数据交互：json报文、接口规范(响应报文规范、请求数据规范、HTTP状态码)
 
-    
+
+
+- 2020/11/09-11/12
+  - SSM+easyui/SpringBoot+easyui项目运行
+  - 学习Springboot+Mybatis+Jsp/Springboot+Mybatis+thymeleaf项目
+  - 掌握对象的增删改查
+  - 实现了Springboot+EasyUI的增删改(明天考完试后继续完善)

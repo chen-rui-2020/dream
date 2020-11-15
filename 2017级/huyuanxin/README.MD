@@ -161,3 +161,102 @@
 * * [x] EasyUI 批量生成按钮
 * * [x] EasyUI DataGrid删除操作
 * * [x] 更新到GitHub [GitHub链接 LearnSSM](https://github.com/huyuanxin1999/LearnSSM)
+
+### 2020.11.5-2020.11.16
+
+* * [x] 学习阿里Java开发规范
+
+* * [x] 将已有代码重构为符合阿里开发规范的代码
+
+* * [x] 上传重构后代码到GitHub
+
+* * [x] Spring测试
+
+    ```java
+    package com.example.demo;
+    
+    import org.junit.jupiter.api.Test;
+    import org.springframework.boot.test.context.SpringBootTest;
+    
+    @SpringBootTest
+    class DemoApplicationTests {
+    
+        @Test
+        void contextLoads() {
+            // 测试代码
+        }
+    
+    }
+    ```
+
+* * [x] Spring多个类测试
+
+    ```java
+    package com.example.demo;
+    
+    import org.junit.runner.RunWith;
+    import org.junit.runners.Suite;
+    
+    // 这个是批量测试
+    @RunWith(Suite.class)
+    @Suite.SuiteClasses({
+            Test1.class,
+            Test2.class,
+            UserMapperTest.class
+            // 把要测试的写在这里
+    })
+    public class DemoApplicationTests {
+    	// Some Code
+    }
+    ```
+
+    ```java
+    package com.example.demo;
+    
+    import com.example.demo.domain.mapper.UserMapper;
+    import org.junit.Test;
+    import org.junit.jupiter.api.DisplayName;
+    import org.junit.runner.RunWith;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.boot.test.context.SpringBootTest;
+    import org.springframework.test.context.junit4.SpringRunner;
+    
+    @RunWith(SpringRunner.class)
+    
+    //不加上会无法创建bean
+    @SpringBootTest 
+    
+    // 测试的名字
+    @DisplayName("测试UserMapper")
+    public class UserMapperTest{
+        @Autowired
+        UserMapper mapper;
+    
+        @Test
+        @DisplayName("测试findAll接口")
+        public void findAll(){
+            mapper.findAll();
+        }
+    }
+    
+    ```
+
+* * [x] 进一步学习Mybatis的写法以及@Param的作用
+
+* * [x] 解决Mybatis全部爆红的问题
+
+  需要添加数据源，且数据库名称要写进xml里面，如下：
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <mapper namespace="com.example.demo.domain.mapper.UserMapper">
+      <!--Sql串-->
+      <sql id="select">
+          Select * From spring.user
+      </sql>
+      <!--以下会报无数据库和无法查到数据库下的属性-->
+  </mapper>
+  ```
+
+  

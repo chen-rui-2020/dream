@@ -256,6 +256,9 @@
           Select * From spring.user
       </sql>
       <!--以下会报无数据库和无法查到数据库下的属性-->
+       <sql id="select">
+          Select * From spring.user
+      </sql>
   </mapper>
   ```
 

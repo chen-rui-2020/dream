@@ -262,4 +262,104 @@
   </mapper>
   ```
 
-  
+
+
+
+### 2020.11.17
+
+* * [x] 完成批量删除
+
+* * [x] 优化分页查询
+
+    ```sql
+    SELECT *
+    FROM spring.user
+    Limit #{start},#{pageSize}
+    # 相比上面的语句，下面语句更快
+    SELECT a.*
+    FROM spring.user a, (select uid from spring.user LIMIT #{start},#{pageSize} ) b 
+    where a.uid=b.uid
+    ```
+
+* * [x] 优化count
+
+    #### 优化前的初始化Sql语句
+
+    ```mysql
+    # 优化前的初始化Sql语句
+    # User表
+    DROP TABLE IF EXISTS `user`;
+    create table User
+    (
+        uid      bigint auto_increment
+            primary key,
+        username varchar(50) not null,
+        password varchar(50) not null
+    );
+    
+    # 添加User数据
+    insert into spring.user(USERNAME, PASSWORD) value ('username', 'password');
+    ```
+
+    #### 优化后的初始化Sql语句
+
+    ```mysql
+    # 完善后的初始化Sql语句
+    # User表
+    DROP TABLE IF EXISTS `user`;
+    create table User
+    (
+        uid      bigint auto_increment
+            primary key,
+        username varchar(50) not null,
+        password varchar(50) not null
+    );
+    
+    # 计数表
+    DROP TABLE IF EXISTS `tablecounter`;
+    create table tablecounter
+    (
+        tid bigint auto_increment,
+        name varchar(255) not null,
+        counter bigint default 0 not null,
+        constraint tablecounter_pk
+            primary key (tid)
+    );
+    
+    create unique index tablecounter_name_uindex
+        on tablecounter (name);
+    
+    # 插入user表的计数
+    insert into tablecounter(name, counter) VALUE ('user',0);
+    
+    # 计算User的触发器，插入
+    CREATE TRIGGER `insertCounter` AFTER INSERT ON spring.user
+     FOR EACH ROW
+    BEGIN
+    UPDATE tablecounter SET tablecounter.counter=tablecounter.counter+1 WHERE tablecounter.name ='user';
+    END;
+    
+    # 计算User的触发器,删除
+    CREATE TRIGGER `deleteCounter` AFTER DELETE ON spring.user
+        FOR EACH ROW
+    BEGIN
+        UPDATE tablecounter SET tablecounter.counter=tablecounter.counter-1 WHERE tablecounter.name ='user';
+    END;
+    ```
+
+    做了优化后，只需查询计数表内的结果，返回即可知道User表内的行数而无需以下COUNT
+
+    ```mysql
+    #优化前
+    SELECT COUNT(*)
+    FROM User;
+    
+    # 优化后
+    select counter from spring.tablecounter where name="User";
+    ```
+
+    
+
+    
+
+    

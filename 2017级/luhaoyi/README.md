@@ -245,3 +245,11 @@
   - 学习Springboot+Mybatis+Jsp/Springboot+Mybatis+thymeleaf项目
   - 掌握对象的增删改查
   - 实现了Springboot+EasyUI的增删改(明天考完试后继续完善)
+
+- 2020/11/13-11/15
+  - mybatis分页和模糊查询
+  - 动态sql
+  - 多种关联关系的处理
+
+- 2020/11/21
+  - 继续实现查询，遇到困难，正在解决...

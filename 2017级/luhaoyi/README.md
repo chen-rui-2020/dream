@@ -254,3 +254,6 @@
 - 2020/11/22
   - 实现了SpringBoot+easyui查询
   - 和队友讨论后还有需要改善的地方，明天继续改进
+
+- 2020/11/25
+  - SpringBoot+easyui CURD [GitHub链接](https://github.com/Yumiko0305/SpringBoot-Easyui-CURD)

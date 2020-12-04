@@ -360,10 +360,63 @@
 
     
 
-    ### 不知道什么时候开始的了-2020.12.2
+    ### nginx+lua模块实现白名单
 
-    完成nginx 的白名单lua模块
+    ```lua
+    function open_redis()
+        local redis = require "resty.redis"
+        local red = redis:new()
+        red:set_timeout(1000) -- 1 sec
+        local ok, err = red:connect(config["redis_host"], config["redis_port"])
+        if not ok then
+            log(ERR, "failed to connect: ", err)
+        end
+        return red, err
+    end
     
+    function ipToDecimal(ckip)
+        local n = 4
+        local decimalNum = 0
+        local pos = 0
+        for s, e in function() return string.find(ckip, '.', pos, true) end do
+            n = n - 1
+            decimalNum = decimalNum + string.sub(ckip, pos, s-1) * (256 ^ n)
+            pos = e + 1
+            if n == 1 then decimalNum = decimalNum + string.sub(ckip, pos, string.len(ckip)) end
+        end
+        return decimalNum
+    end
     
+    function whiteip()
+        local headers = ngx.req.get_headers()
+        local cIP = headers["X-REAL-IP"] or headers["X_FORWARDED_FOR"] or ngx.var.remote_addr or "0.0.0.0"
+        local red=open_redis()
+        local redisRes=red:get("allowList")
+        local ipWhitelist={redisRes}
+        if next(ipWhitelist) ~= nil then
+            local numIP = 0
+            if cIP ~= "unknown" then numIP = tonumber(ipToDecimal(cIP))  end
+            for _,ip in pairs(ipWhitelist) do
+                local s, e = string.find(ip, '-', 0, true)
+                if s == nil and cIP == ip then
+                    return true
+                elseif s ~= nil then
+                    sIP = tonumber(ipToDecimal(string.sub(ip, 0, s - 1)))
+                    eIP = tonumber(ipToDecimal(string.sub(ip, e + 1, string.len(ip))))
+                    if numIP >= sIP and numIP <= eIP then
+                       return true
+                    end
+                end
+            end
+        end
+        return false
+    end
+    ```
+
     
-    
+
+### 2020.12.4
+
+* * [x] 完成患者全息视图下的就诊信息查询接口
+* * [x] 启动solr
+* * [x] 学习solr
